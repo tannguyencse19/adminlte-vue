@@ -5,8 +5,9 @@
 
     <v-main>
       <Breadcrumb />
-      <router-view />
       <v-btn to="/login">Login</v-btn>
+      <router-view />
+      <!-- <CalendarVue></CalendarVue> -->
       <!-- <v-btn @click="$root.$emit('show-modal:quickview')" depressed color="primary">
         click to show modal quickview
       </v-btn> -->
@@ -24,6 +25,7 @@
   import Footer from "@/components/Footer";
   import Modal from "@/components/Modal.vue";
   import Breadcrumb from "@/components/Breadcrumb.vue";
+  import CalendarVue from '../Calendar/Calendar.vue';
 
   export default {
     name: "Home",
@@ -35,6 +37,7 @@
       Footer,
       Modal,
       Breadcrumb,
+      CalendarVue
     },
     methods: {},
   };

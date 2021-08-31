@@ -41,7 +41,7 @@ const routes = [
         ],
       },
       {
-        path: "/login",
+        path: "login",
         name: "login",
         component: Login,
         meta: {
@@ -49,7 +49,7 @@ const routes = [
         },
       },
       {
-        path: "/forgot-password",
+        path: "forgot-password",
         name: "forgot-password",
         component: ForgotPassword,
         meta: {
