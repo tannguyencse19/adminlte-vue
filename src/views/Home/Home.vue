@@ -8,7 +8,7 @@
       <v-btn to="/login">Login</v-btn>
       <router-view />
       <!-- <CalendarVue></CalendarVue> -->
-      <!-- <DashboardVue></DashboardVue> -->
+      <DashboardVue></DashboardVue>
       <!-- <v-btn @click="$root.$emit('show-modal:quickview')" depressed color="primary">
         click to show modal quickview
       </v-btn> -->
