@@ -15,7 +15,7 @@ moment.setAttribute("src", "../../plugins/moment/moment.min.js");
 document.head.appendChild(moment);
 
 let fullcalendar = document.createElement("script");
-fullcalendar.setAttribute("src", "../../plugins/fullcalendar/main.js");
+fullcalendar.setAttribute("src", "../../plugins/fullcalendar/main.min.js");
 document.head.appendChild(fullcalendar);
 
 let adminlte = document.createElement("script");
