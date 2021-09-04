@@ -1,5 +1,8 @@
 # e-project
 
+## De serve project:
+1. npm install de download node_modules
+2. npm run serve
 ## Chuc nang da thuc hien
 
 - Dashboard: Xuat hien ngay khi serve project cung voi button login
