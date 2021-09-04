@@ -1,11 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home/Home.vue";
-import ProductCategories from "../views/Product/test-ProductCategories.vue";
-import ProductDetails from "../views/Product/test-ProductDetails.vue";
-import ProductList from "../views/Product/ProductList.json";
+// import ProductCategories from "../views/Product/test-ProductCategories.vue";
+// import ProductDetails from "../views/Product/test-ProductDetails.vue";
+// import ProductList from "../views/Product/ProductList.json";
 import Login from "../views/Auth/Login.vue";
 import ForgotPassword from "../views/Auth/ForgotPassword.vue";
+import Calendar from "../views/Calendar/Calendar.vue";
 
 Vue.use(VueRouter);
 
@@ -18,28 +19,28 @@ const routes = [
       breadcrumb: "Home",
     },
     children: [
-      {
-        path: "/danh-muc-cun",
-        name: "danh-muc-cun",
-        component: ProductCategories,
-        meta: {
-          breadcrumb: "Danh mục cún",
-        },
-        children: [
-          {
-            path: ":id", // props id
-            name: "ProductDetails",
-            component: ProductDetails,
-            meta: {
-              breadcrumb: (params) => {
-                const product = ProductList.find((product) => product.id == params.id);
+      // {
+      //   path: "/danh-muc-cun",
+      //   name: "danh-muc-cun",
+      //   component: ProductCategories,
+      //   meta: {
+      //     breadcrumb: "Danh mục cún",
+      //   },
+      //   children: [
+      //     {
+      //       path: ":id", // props id
+      //       name: "ProductDetails",
+      //       component: ProductDetails,
+      //       meta: {
+      //         breadcrumb: (params) => {
+      //           const product = ProductList.find((product) => product.id == params.id);
 
-                return `${product.name}`;
-              },
-            },
-          },
-        ],
-      },
+      //           return `${product.name}`;
+      //         },
+      //       },
+      //     },
+      //   ],
+      // },
       {
         path: "login",
         name: "login",
@@ -54,6 +55,14 @@ const routes = [
         component: ForgotPassword,
         meta: {
           breadcrumb: "forgot-password",
+        },
+      },
+      {
+        path: "calendar",
+        name: "calendar",
+        component: Calendar,
+        meta: {
+          breadcrumb: "calendar",
         },
       },
     ],

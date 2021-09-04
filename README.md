@@ -1,5 +1,18 @@
 # e-project
 
+## Chuc nang da thuc hien
+
+- Dashboard: Xuat hien ngay khi serve project cung voi button login
+- Login: Button login nam o tren Dashboard
+- Forgot-password: Nam trong trang login
+- Calendar: Trong sidebar cua Dashboard. Sau khi an vao button calendar, scroll len de xem trang
+  Calendar
+
+## Bug chua fix
+
+- Chua gan external script (vd: jquery, bootstrap - khong tinh BootstrapVue) vao Vue duoc
+- Style cua Vuetify override local style
+
 ## Project start custom
 
 ```

@@ -1,6 +1,10 @@
 .DS_Store
 node_modules
 /dist
+src/assets
+src/plugins/*
+!src/plugins/vuetify.js
+src/views/Product
 
 
 # local env files
