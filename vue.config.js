@@ -1,5 +1,5 @@
 // const webpack = require("webpack");
-const jquery = require("jquery")
+// const jquery = require("jquery")
 
 module.exports = {
   transpileDependencies: ["vuetify"],

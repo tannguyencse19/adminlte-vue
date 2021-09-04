@@ -2,7 +2,7 @@
 <script>
   // import * as $ from "../../plugins/jquery/jquery";
   // import * as bootstrap from "../../plugins/bootstrap/js/bootstrap.bundle";
-  import $ from 'jquery'
+  // import $ from 'jquery'
 
   export default {
     name: "Login",
