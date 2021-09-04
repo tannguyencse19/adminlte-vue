@@ -1,5 +1,8 @@
 let jquery = document.createElement("script");
-jquery.setAttribute("src", "../../plugins/jquery/jquery.min.js");
+jquery.setAttribute("src", "../../plugins/jquery/jquery.js");
+// Bug expected token:
+//  1. Da dung path
+//  2. Trang goc cung lam giong minh
 document.body.appendChild(jquery);
 
 let bootstrap = document.createElement("script");

@@ -1,6 +1,6 @@
 <template src="./Dashboard.html" />
 
-<script src="./main.js">
+<script>
   export default {
     name: "Dashboard",
   };

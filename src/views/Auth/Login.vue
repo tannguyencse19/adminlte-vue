@@ -1,5 +1,9 @@
 <template src="./Login.html"></template>
-<script src="./main.js">
+<script>
+  // import * as $ from "../../plugins/jquery/jquery";
+  // import * as bootstrap from "../../plugins/bootstrap/js/bootstrap.bundle";
+  import $ from 'jquery'
+
   export default {
     name: "Login",
   };
