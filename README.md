@@ -28,12 +28,14 @@ Link github AdminLTE: https://github.com/ColorlibHQ/AdminLTE
 *Chu y 2: Cac code bi comment dung de test nhanh*
 
 1. Views (thu muc: src/views/[ten view])
-- Moi views duoc gop tu: <template> [ten view].html; <script> main.js; <style> main.css
-- File main.js import external scripts cua AdminLTE (dang bi bug)
-- File main.css import external styles cua AdminLTE.
- 
+  - Moi views duoc gop tu: <template> [ten view].html; <script> main.js; <style> main.css
+  - File main.js import external scripts cua AdminLTE (dang bi bug)
+  - File main.css import external styles cua AdminLTE.
 
+  
 2. Router (thu muc: src/router/index.js)
+3. a
+4. a
   
 ---
 
