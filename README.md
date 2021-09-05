@@ -32,6 +32,7 @@ Link github AdminLTE: https://github.com/ColorlibHQ/AdminLTE
 - File main.js import external scripts cua AdminLTE (dang bi bug)
 - File main.css import external styles cua AdminLTE.
  
+
 2. Router (thu muc: src/router/index.js)
   
 ---
