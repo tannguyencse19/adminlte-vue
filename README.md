@@ -22,7 +22,9 @@ Link github AdminLTE: https://github.com/ColorlibHQ/AdminLTE
 - Style cua Vuetify override local style
 
 ## Cach modify
+
 *Chu y 1: Hien tai chi can modify trong thu muc src, cac thu muc sau: router, views. Cac thu muc con lai dung de serve, se xoa trong tuong lai*
+
 *Chu y 2: Cac code bi comment dung de test nhanh*
 
 1. Views (thu muc: src/views/[ten view])
