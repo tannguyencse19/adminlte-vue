@@ -1,6 +1,6 @@
 // https://stackoverflow.com/questions/55309945/vue-cli-3-project-alias-src-to-or-not-working
-const path = require("path");
-const vueSrc = "./src";
+// const path = require("path");
+// const vueSrc = "./src";
 
 module.exports = {
   transpileDependencies: ["vuetify"],
@@ -10,12 +10,12 @@ module.exports = {
       return args;
     });
   },
-  configureWebpack: {
-    resolve: {
-      alias: {
-        "@": path.resolve(__dirname, vueSrc),
-      },
-      extensions: [".js", ".vue", ".json"],
-    },
-  },
+  // configureWebpack: {
+  //   resolve: {
+  //     alias: {
+  //       "@": path.resolve(__dirname, vueSrc),
+  //     },
+  //     extensions: [".js", ".vue", ".json"],
+  //   },
+  // },
 };

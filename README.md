@@ -8,7 +8,7 @@
 - Sửa lại router: không cho vào children mà đưa ra ngoài ngang hàng với dashboard hết.
 - Fix lỗi thụt 2 dòng khi code (prettier)
 
-2. Chưa làm: 
+2. Chưa làm:
 
 - Sáp nhập Dashboard với component Home
 - Gắn script vào
@@ -42,11 +42,11 @@
 - Moi views duoc gop tu: <template> [ten view].html; <script> main.js; <style> main.css
 - File main.js import external scripts cua AdminLTE (dang bi bug)
 - File main.css import external styles cua AdminLTE.
-  
+
 2. Router (thu muc: src/router/index.js)
 
 3. Link github AdminLTE: https://github.com/ColorlibHQ/AdminLTE
-  
+
 ---
 
 ## Project start custom
