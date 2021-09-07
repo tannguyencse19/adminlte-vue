@@ -1,9 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/views/Home/Home.vue";
-// import ProductCategories from "@/views/Product/test-ProductCategories.vue";
-// import ProductDetails from "@/views/Product/test-ProductDetails.vue";
-// import ProductList from "@/views/Product/ProductList.json";
 import Login from "@/views/Auth/Login.vue";
 import ForgotPassword from "@/views/Auth/ForgotPassword.vue";
 import Calendar from "@/views/Calendar/Calendar.vue";
@@ -12,6 +9,9 @@ import ProjectDetail from "@/views/Project/Detail/ProjectDetail.vue";
 import ProjectEdit from "@/views/Project/Edit/ProjectEdit.vue";
 import ProjectKanban from "@/views/Project/Kanban/ProjectKanban.vue";
 import ProjectSummary from "@/views/Project/Summary/ProjectSummary.vue";
+import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
+import InboxRead from "@/views/Inbox/Read/Read.vue";
+import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
 
 Vue.use(VueRouter);
 
@@ -24,28 +24,6 @@ const routes = [
       breadcrumb: "Home",
     },
   },
-  // {
-  //   path: "/danh-muc-cun",
-  //   name: "danh-muc-cun",
-  //   component: ProductCategories,
-  //   meta: {
-  //     breadcrumb: "Danh mục cún",
-  //   },
-  //   children: [
-  //     {
-  //       path: ":id", // props id
-  //       name: "ProductDetails",
-  //       component: ProductDetails,
-  //       meta: {
-  //         breadcrumb: (params) => {
-  //           const product = ProductList.find((product) => product.id == params.id);
-
-  //           return `${product.name}`;
-  //         },
-  //       },
-  //     },
-  //   ],
-  // },
   {
     path: "/login",
     name: "login",
@@ -108,6 +86,30 @@ const routes = [
     component: ProjectKanban,
     meta: {
       breadcrumb: "project-kanban",
+    },
+  },
+  {
+    path: "/inbox",
+    name: "inbox-summary",
+    component: InboxSummary,
+    meta: {
+      breadcrumb: "inbox",
+    },
+  },
+  {
+    path: "/inbox/read",
+    name: "inbox-read",
+    component: InboxRead,
+    meta: {
+      breadcrumb: "inbox-read",
+    },
+  },
+  {
+    path: "/inbox/compose",
+    name: "inbox-compose",
+    component: InboxCompose,
+    meta: {
+      breadcrumb: "inbox-compose",
     },
   },
 ];

@@ -4,18 +4,23 @@
 
 1. Đã làm
 
-- Thay a href -> router link ở Project views
-- Tạm bỏ Breadcrumb library vì thấy ko cần, chỉ cần viết tay
-- Tạm để Home chứa Dashboard để tách views ra
+- Mailbox (inbox) views
 
 2. Chưa làm:
 
-- Sửa lại content trong sidebar của các view => Khi đó mới sửa hết a href thành router-link
+- Direct message --> Chèn ở đâu???
+- Sửa a href --> Router link 
 
 3. Dự định cho phiên bản kế tiếp
 
+- Muốn dùng nested named views (hay nested routes) thì phải làm component trùng nhau (sidebar,
+  navbar, footer) đã. Còn hiện tại đang view nguyên 1 cục nên nested sẽ view nhiều cái views chứ ko
+  phải chồng nhau.
+- Hiện đang viết tạm "/parent-component/child-component" (Inbox views) và
+  "/parent-component-child-component" (Projects views)
 
 ## De serve project:
+
 1. Clone ve
 2. npm install de download node_modules
 3. npm run serve
