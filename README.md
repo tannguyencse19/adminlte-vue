@@ -1,21 +1,19 @@
 # e-project
 
-## Cập nhật UI 0.0.3
+## Cập nhật UI 0.0.3.1
 
 1. Đã làm
 
-- Thêm view Project: Summary, Add, Edit, Details, Kanban.
-- Sửa lại router: không cho vào children mà đưa ra ngoài ngang hàng với dashboard hết.
-- Fix lỗi thụt 2 dòng khi code (prettier)
+- Thay a href -> router link ở Project views
+- Tạm bỏ Breadcrumb library vì thấy ko cần, chỉ cần viết tay
+- Tạm để Home chứa Dashboard để tách views ra
 
 2. Chưa làm:
 
-- Sáp nhập Dashboard với component Home
-- Gắn script vào
+- Sửa lại content trong sidebar của các view => Khi đó mới sửa hết a href thành router-link
 
 3. Dự định cho phiên bản kế tiếp
 
-- Breadcrumb: Viết tay (mỗi views sẽ viết text breadcrumb khác nhau) chứ không xài library có sẵn nữa.
 
 ## De serve project:
 1. Clone ve

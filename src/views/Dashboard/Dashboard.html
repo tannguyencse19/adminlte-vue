@@ -140,6 +140,13 @@
           </a>
         </li>
 
+        <!-- Login -->
+        <li class="nav-item">
+          <router-link to="/login" class="nav-link">
+            Login
+          </router-link>
+        </li>
+
         <!--         Sidebar user panel (optional)
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
@@ -157,11 +164,11 @@
     <!-- Left Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="_TEST.html" class="brand-link">
+      <router-link to="/" class="brand-link">
         <img src="@/plugins/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">
         <span class="brand-text font-weight-light">AdminLTE 3</span>
-      </a>
+      </router-link>
 
       <!-- Sidebar -->
       <div class="sidebar">
@@ -213,10 +220,10 @@
             </li>
             <!-- Projects -->
             <li class="nav-item">
-              <a href="#projects" class="nav-link">
+              <router-link to="/project-summary" class="nav-link">
                 <i class="nav-icon fas fa-suitcase"></i>
-                <p>Projects</p>
-              </a>
+                <p>Project Summary</p>
+              </router-link>
             </li>
             <!-- WORK OVERVIEW treeview -->
             <li class="nav-item menu-open">

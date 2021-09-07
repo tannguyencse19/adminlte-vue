@@ -4,9 +4,7 @@
     <!-- <Header /> -->
 
     <v-main>
-      <Breadcrumb />
-      <v-btn to="/login" style="background-color: green; color: white">Login</v-btn>
-      <v-btn to="/project-summary" style="background-color: blue; color: white">Project Summary</v-btn>
+      <!-- <Breadcrumb /> -->
       <router-view />
       <Dashboard />
       <!-- <v-btn @click="$root.$emit('show-modal:quickview')" depressed color="primary">
