@@ -22,7 +22,6 @@
 2. npm install de download node_modules
 3. npm run serve
 
-
 ## Chuc nang da thuc hien
 
 - Dashboard: Xuat hien ngay khi serve project cung voi button login
@@ -38,15 +37,11 @@
 
 ## Cach modify
 
-*Chu y 1: Hien tai chi can modify trong thu muc src, cac thu muc sau: router, views. Cac thu muc con lai dung de serve, se xoa trong tuong lai*
-
-*Chu y 2: Cac code bi comment dung de test nhanh*
-
 1. Views (thu muc: src/views/[ten view])
 
-  - Moi views duoc gop tu: <template> [ten view].html; <script> main.js; <style> main.css
-  - File main.js import external scripts cua AdminLTE (dang bi bug)
-  - File main.css import external styles cua AdminLTE.
+- Moi views duoc gop tu: <template> [ten view].html; <script> main.js; <style> main.css
+- File main.js import external scripts cua AdminLTE (dang bi bug)
+- File main.css import external styles cua AdminLTE.
   
 2. Router (thu muc: src/router/index.js)
 
