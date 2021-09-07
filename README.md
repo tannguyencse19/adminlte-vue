@@ -42,19 +42,15 @@
 
 *Chu y 2: Cac code bi comment dung de test nhanh*
 
-Views (thu muc: src/views/[ten view])
+1. Views (thu muc: src/views/[ten view])
 
 - Moi views duoc gop tu: <template> [ten view].html; <script> main.js; <style> main.css
 - File main.js import external scripts cua AdminLTE (dang bi bug)
 - File main.css import external styles cua AdminLTE.
   
-<!-- end of the list -->
-  
-Router (thu muc: src/router/index.js)
-  
-<!-- end of the list -->
+2. Router (thu muc: src/router/index.js)
 
-Link github AdminLTE: https://github.com/ColorlibHQ/AdminLTE
+3. Link github AdminLTE: https://github.com/ColorlibHQ/AdminLTE
   
 ---
 
