@@ -9,14 +9,14 @@
 2. Chưa làm:
 
 - Direct message --> Chèn ở đâu???
-- Sửa a href --> Router link 
+- Sửa a href --> Router link
 
 3. Dự định cho phiên bản kế tiếp
 
 - Muốn dùng nested named views (hay nested routes) thì phải làm component trùng nhau (sidebar,
   navbar, footer) đã. Còn hiện tại đang view nguyên 1 cục nên nested sẽ view nhiều cái views chứ ko
   phải chồng nhau.
-- Hiện đang viết tạm "/parent-component/child-component" (Inbox views) và
+- Hiện đang viết tạm router-link to có dạng "/parent-component/child-component" (Inbox views) và
   "/parent-component-child-component" (Projects views)
 
 ## De serve project:
