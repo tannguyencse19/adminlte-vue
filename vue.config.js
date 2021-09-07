@@ -1,5 +1,6 @@
-// const webpack = require("webpack");
-// const jquery = require("jquery")
+// https://stackoverflow.com/questions/55309945/vue-cli-3-project-alias-src-to-or-not-working
+const path = require("path");
+const vueSrc = "./src";
 
 module.exports = {
   transpileDependencies: ["vuetify"],
@@ -9,15 +10,12 @@ module.exports = {
       return args;
     });
   },
-  // https://stackoverflow.com/questions/37928998/how-to-use-a-jquery-plugin-inside-vue
-  // https://stackoverflow.com/questions/59542447/vue-js-invalid-options-in-vue-config-js-plugins-is-not-allowed
-  // https://stackoverflow.com/questions/56472305/how-to-solve-jquery-requires-a-window-with-a-document-error
-  // plugins: [
-  //   new jquery({
-  //     $: "jquery",
-  //     jquery: "jquery",
-  //     "window.jQuery": "jquery",
-  //     jQuery: "jquery",
-  //   }),
-  // ],
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, vueSrc),
+      },
+      extensions: [".js", ".vue", ".json"],
+    },
+  },
 };

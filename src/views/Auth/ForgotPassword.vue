@@ -5,4 +5,4 @@ export default {
   name: "ForgotPassword",
 };
 </script>
-<style src="./main.css"></style>
+<style src="./main.css" scoped />

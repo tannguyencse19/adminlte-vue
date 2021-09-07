@@ -6,4 +6,4 @@
   };
 </script>
 
-<style src="./main.css" />
+<style src="./main.css" scoped  />

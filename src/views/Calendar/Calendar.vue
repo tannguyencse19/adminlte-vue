@@ -5,4 +5,4 @@ export default {
   name: "Calendar",
 };
 </script>
-<style src="./main.css"></style>
+<style src="./main.css" scoped />

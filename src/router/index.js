@@ -1,12 +1,17 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home/Home.vue";
-// import ProductCategories from "../views/Product/test-ProductCategories.vue";
-// import ProductDetails from "../views/Product/test-ProductDetails.vue";
-// import ProductList from "../views/Product/ProductList.json";
-import Login from "../views/Auth/Login.vue";
-import ForgotPassword from "../views/Auth/ForgotPassword.vue";
-import Calendar from "../views/Calendar/Calendar.vue";
+import Home from "@/views/Home/Home.vue";
+// import ProductCategories from "@/views/Product/test-ProductCategories.vue";
+// import ProductDetails from "@/views/Product/test-ProductDetails.vue";
+// import ProductList from "@/views/Product/ProductList.json";
+import Login from "@/views/Auth/Login.vue";
+import ForgotPassword from "@/views/Auth/ForgotPassword.vue";
+import Calendar from "@/views/Calendar/Calendar.vue";
+import ProjectAdd from "@/views/Project/Add/ProjectAdd.vue";
+import ProjectDetail from "@/views/Project/Detail/ProjectDetail.vue";
+import ProjectEdit from "@/views/Project/Edit/ProjectEdit.vue";
+import ProjectKanban from "@/views/Project/Kanban/ProjectKanban.vue";
+import ProjectSummary from "@/views/Project/Summary/ProjectSummary.vue";
 
 Vue.use(VueRouter);
 
@@ -18,54 +23,92 @@ const routes = [
     meta: {
       breadcrumb: "Home",
     },
-    children: [
-      // {
-      //   path: "/danh-muc-cun",
-      //   name: "danh-muc-cun",
-      //   component: ProductCategories,
-      //   meta: {
-      //     breadcrumb: "Danh mục cún",
-      //   },
-      //   children: [
-      //     {
-      //       path: ":id", // props id
-      //       name: "ProductDetails",
-      //       component: ProductDetails,
-      //       meta: {
-      //         breadcrumb: (params) => {
-      //           const product = ProductList.find((product) => product.id == params.id);
+  },
+  // {
+  //   path: "/danh-muc-cun",
+  //   name: "danh-muc-cun",
+  //   component: ProductCategories,
+  //   meta: {
+  //     breadcrumb: "Danh mục cún",
+  //   },
+  //   children: [
+  //     {
+  //       path: ":id", // props id
+  //       name: "ProductDetails",
+  //       component: ProductDetails,
+  //       meta: {
+  //         breadcrumb: (params) => {
+  //           const product = ProductList.find((product) => product.id == params.id);
 
-      //           return `${product.name}`;
-      //         },
-      //       },
-      //     },
-      //   ],
-      // },
-      {
-        path: "login",
-        name: "login",
-        component: Login,
-        meta: {
-          breadcrumb: "login",
-        },
-      },
-      {
-        path: "forgot-password",
-        name: "forgot-password",
-        component: ForgotPassword,
-        meta: {
-          breadcrumb: "forgot-password",
-        },
-      },
-      {
-        path: "calendar",
-        name: "calendar",
-        component: Calendar,
-        meta: {
-          breadcrumb: "calendar",
-        },
-      },
-    ],
+  //           return `${product.name}`;
+  //         },
+  //       },
+  //     },
+  //   ],
+  // },
+  {
+    path: "/login",
+    name: "login",
+    component: Login,
+    meta: {
+      breadcrumb: "login",
+    },
+  },
+  {
+    path: "/forgot-password",
+    name: "forgot-password",
+    component: ForgotPassword,
+    meta: {
+      breadcrumb: "forgot-password",
+    },
+  },
+  {
+    path: "/calendar",
+    name: "calendar",
+    component: Calendar,
+    meta: {
+      breadcrumb: "calendar",
+    },
+  },
+  {
+    path: "/project-summary",
+    name: "project-summary",
+    component: ProjectSummary,
+    meta: {
+      breadcrumb: "project-summary",
+    },
+  },
+  {
+    path: "/project-add",
+    name: "project-add",
+    component: ProjectAdd,
+    meta: {
+      breadcrumb: "project-add",
+    },
+  },
+  {
+    path: "/project-detail",
+    name: "project-detail",
+    component: ProjectDetail,
+    meta: {
+      breadcrumb: "project-detail",
+    },
+  },
+  {
+    path: "/project-edit",
+    name: "project-edit",
+    component: ProjectEdit,
+    meta: {
+      breadcrumb: "project-edit",
+    },
+  },
+  {
+    path: "/project-kanban",
+    name: "project-kanban",
+    component: ProjectKanban,
+    meta: {
+      breadcrumb: "project-kanban",
+    },
   },
 ];
 
