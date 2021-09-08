@@ -4,7 +4,7 @@
 
 1. Đã làm
 
-- Sửa a href --> Router link của inbox, calendar
+- Sửa a href --> Router link của inbox, calendar, project
 - Comment out một số code chưa implement ở dashboard để deploy cho sạch sẽ
 
 2. Chưa làm:
