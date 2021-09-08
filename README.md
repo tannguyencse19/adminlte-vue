@@ -10,6 +10,7 @@
 
 - Direct message --> Chèn ở đâu???
 - Sửa a href --> Router link
+- Chưa thêm link dẫn đến mailbox trên sidebar dashboard
 
 3. Dự định cho phiên bản kế tiếp
 
