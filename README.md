@@ -1,16 +1,15 @@
 # e-project
 
-## Cập nhật UI 0.0.4
+## Cập nhật UI 0.0.4.1
 
 1. Đã làm
 
-- Mailbox (inbox) views
+- Sửa a href --> Router link của inbox, calendar
+- Comment out một số code chưa implement ở dashboard để deploy cho sạch sẽ
 
 2. Chưa làm:
 
 - Direct message --> Chèn ở đâu???
-- Sửa a href --> Router link
-- Chưa thêm link dẫn đến mailbox trên sidebar dashboard
 
 3. Dự định cho phiên bản kế tiếp
 
