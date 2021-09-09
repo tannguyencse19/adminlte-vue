@@ -11,6 +11,7 @@
 - Refactoring: NavLink đang copy paste.
 - Thiếu component header, footer.
 - Chưa tích hợp Vuetify. Nhưng nếu adminlte đã dùng bootstrap thì cần không?
+- index.js: path "" đang để tạm
 
 3. Dự định cho phiên bản kế tiếp
 
