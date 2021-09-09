@@ -55,7 +55,7 @@
         >
           <!-- Dashboard -->
           <li class="nav-item">
-            <router-link to="/test-sidebar-with-component/dashboard" class="nav-link" active-class="active">
+            <router-link to="/" class="nav-link" active-class="active">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
             </router-link>
@@ -69,21 +69,21 @@
             </li> -->
           <!-- Discuss -->
           <li class="nav-item">
-            <router-link to="/test-sidebar-inbox" class="nav-link" active-class="active">
+            <router-link to="/inbox" class="nav-link" active-class="active">
               <i class="nav-icon far fa-comment-dots"></i>
               <p>Inbox</p>
             </router-link>
           </li>
           <!-- Calendar -->
           <li class="nav-item">
-            <router-link to="/test-sidebar-calendar" class="nav-link" active-class="active">
+            <router-link to="/calendar" class="nav-link" active-class="active">
               <i class="nav-icon far fa-calendar-alt"></i>
               <p>Calendar</p>
             </router-link>
           </li>
           <!-- Projects -->
           <li class="nav-item">
-            <router-link to="/test-sidebar-project-summary" class="nav-link" active-class="active">
+            <router-link to="/project-summary" class="nav-link" active-class="active">
               <i class="nav-icon fas fa-suitcase"></i>
               <p>Project Summary</p>
             </router-link>

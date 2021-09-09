@@ -4,7 +4,7 @@
 
 1. Đã làm
 
-- Bỏ nested named views vào Home
+- Bỏ nested named views vào Home. Mới chỉ update cho Dashboard, các component còn lại chưa thay đổi
 
 2. Chưa làm:
 
