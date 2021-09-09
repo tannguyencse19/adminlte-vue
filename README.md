@@ -1,17 +1,16 @@
 # e-project
 
-## Cập nhật UI 0.0.5
+## Cập nhật UI 0.0.5.1
 
 1. Đã làm
 
-- Tạo component sidebar
-- Sidebar active using active-class="tên class đã được style"
+- Bỏ nested named views vào Home
 
 2. Chưa làm:
 
 - Refactoring: NavLink đang copy paste.
 - Thiếu component header, footer.
-- Bỏ nested named views vào Home
+- Chưa tích hợp Vuetify. Nhưng nếu adminlte đã dùng bootstrap thì cần không?
 
 3. Dự định cho phiên bản kế tiếp
 

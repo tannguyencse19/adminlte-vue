@@ -1,36 +1,33 @@
 <template>
-  <!-- Chu y: Khong dung v-app de bi overrided style -->
-  <div>
-    <!-- <Header /> -->
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- <Header /> -->
 
-    <v-main>
-      <!-- <Breadcrumb /> -->
-      <router-view />
-      <Dashboard />
-      <!-- <v-btn @click="$root.$emit('show-modal:quickview')" depressed color="primary">
-        click to show modal quickview
-      </v-btn> -->
-    </v-main>
+      <!-- <v-main> -->
+        <Navbar></Navbar>
+        <Sidebar></Sidebar>
+        <router-view />
+      <!-- </v-main> -->
 
-    <!-- <Footer /> -->
-  </div>
+      <!-- <Footer /> -->
+    </div>
+  </body>
 </template>
 
 <script>
 /* eslint-disable vue/no-unused-components */
-  // import Header from "@/components/Header";
-  // import Footer from "@/components/Footer";
-  // import Modal from "@/components/Modal.vue";
-  import Breadcrumb from "@/components/Breadcrumb.vue";
-  import Dashboard from "../Dashboard/Dashboard.vue";
+// import Header from "@/components/Header";
+// import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar/Navbar.vue"
+import Sidebar from "@/components/Sidebar/Sidebar.vue"
 
-  export default {
-    name: "Home",
-    components: {
-      Breadcrumb,
-      Dashboard,
-    },
-  };
+export default {
+  name: "Home",
+  components: {
+    Navbar,
+    Sidebar,
+  },
+};
 </script>
 
 <style scoped></style>

@@ -20,12 +20,16 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: "",
+    name: "AfterLogin",
     component: Home,
-    meta: {
-      breadcrumb: "Home",
-    },
+    children: [
+      {
+        path: "/",
+        name: "Dashboard",
+        component: Dashboard2,
+      },
+    ],
   },
   {
     path: "/login",
