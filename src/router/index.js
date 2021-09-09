@@ -12,6 +12,9 @@ import ProjectSummary from "@/views/Project/Summary/ProjectSummary.vue";
 import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
 import InboxRead from "@/views/Inbox/Read/Read.vue";
 import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
+import Sidebar from "@/components/Sidebar/Sidebar.vue";
+import Test from "@/components/Sidebar/Test.vue";
+import Dashboard2 from "@/components/Sidebar/Dashboard2.vue";
 
 Vue.use(VueRouter);
 
@@ -90,7 +93,7 @@ const routes = [
   },
   {
     path: "/inbox",
-    name: "inbox-summary",
+    name: "inbox",
     component: InboxSummary,
     meta: {
       breadcrumb: "inbox",
@@ -111,6 +114,38 @@ const routes = [
     meta: {
       breadcrumb: "inbox-compose",
     },
+  },
+  {
+    path: "/test-sidebar",
+    name: "Dashboard",
+    component: Sidebar,
+  },
+  {
+    path: "/test-sidebar-inbox",
+    name: "Inbox",
+    component: Sidebar,
+  },
+  {
+    path: "/test-sidebar-calendar",
+    name: "Calendar",
+    component: Sidebar,
+  },
+  {
+    path: "/test-sidebar-project-summary",
+    name: "Project-summary",
+    component: Sidebar,
+  },
+  {
+    path: "/test-sidebar-with-component",
+    name: "Test",
+    component: Test,
+    children: [
+      {
+        path: "dashboard",
+        name: "Dashboard",
+        component: Dashboard2,
+      },
+    ],
   },
 ];
 

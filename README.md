@@ -1,23 +1,19 @@
 # e-project
 
-## Cập nhật UI 0.0.4.1
+## Cập nhật UI 0.0.5
 
 1. Đã làm
 
-- Sửa a href --> Router link của inbox, calendar, project
-- Comment out một số code chưa implement ở dashboard để deploy cho sạch sẽ
+- Tạo component sidebar
+- Sidebar active using active-class="tên class đã được style"
 
 2. Chưa làm:
 
-- Direct message --> Chèn ở đâu???
+- Refactoring: NavLink đang copy paste.
+- Thiếu component header, footer.
+- Bỏ nested named views vào Home
 
 3. Dự định cho phiên bản kế tiếp
-
-- Muốn dùng nested named views (hay nested routes) thì phải làm component trùng nhau (sidebar,
-  navbar, footer) đã. Còn hiện tại đang view nguyên 1 cục nên nested sẽ view nhiều cái views chứ ko
-  phải chồng nhau.
-- Hiện đang viết tạm router-link to có dạng "/parent-component/child-component" (Inbox views) và
-  "/parent-component-child-component" (Projects views)
 
 ## De serve project:
 
