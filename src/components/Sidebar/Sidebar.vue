@@ -83,7 +83,7 @@
           </li>
           <!-- Projects -->
           <li class="nav-item">
-            <router-link to="/project-summary" class="nav-link" active-class="active">
+            <router-link to="/project" class="nav-link" active-class="active">
               <i class="nav-icon fas fa-suitcase"></i>
               <p>Project Summary</p>
             </router-link>

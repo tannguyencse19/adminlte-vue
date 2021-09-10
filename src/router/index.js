@@ -48,7 +48,7 @@ const routes = [
         component: InboxCompose,
       },
       {
-        path: "/project-summary",
+        path: "/project",
         name: "project-summary",
         component: ProjectSummary,
       },
@@ -58,17 +58,17 @@ const routes = [
         component: ProjectAdd,
       },
       {
-        path: "/project-detail",
+        path: "/project/detail",
         name: "project-detail",
         component: ProjectDetail,
       },
       {
-        path: "/project-edit",
+        path: "/project/edit",
         name: "project-edit",
         component: ProjectEdit,
       },
       {
-        path: "/project-kanban",
+        path: "/project/kanban",
         name: "project-kanban",
         component: ProjectKanban,
       },
