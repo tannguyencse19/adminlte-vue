@@ -7,7 +7,8 @@
 - Bỏ nested named views vào tất cả views.
 - Tạo component footer.
 - Chính thức uninstall vue-2-breadcrumbs. Breadcrumb.vue --> Chuyển vào folder archive
-- Chưa biết để Project Kanban ở đâu + Sidebar ko sáng Project Summary (đã fix bằng cách sửa router-link path từ dạng [tên component1-tên component2] --> [tên component1/tên component2])
+- Chưa biết để Project Kanban ở đâu + Sidebar ko sáng Project Summary (đã fix bằng cách sửa
+  router-link path từ dạng [tên component1-tên component2] --> [tên component1/tên component2])
 
 2. Chưa làm:
 
@@ -15,7 +16,9 @@
 - Chưa tích hợp Vuetify. Nhưng nếu adminlte đã dùng bootstrap thì cần không?
 - index.js: path "" đang để tạm
 - Preloader chưa có JS nên chưa xài được
-- Project views: Add, Edit chưa có nút quay về project summary (nghĩa là ng ta phải tự suy ra muốn về project summary thì ấn vào sidebar => Xem xét)
+- Inbox views: Breadcrumb chưa lồng nhau
+- Project views: Add, Edit chưa có nút quay về project summary (nghĩa là ng ta phải tự suy ra muốn
+  về project summary thì ấn vào sidebar => Xem xét)
 
 3. Bug
 
