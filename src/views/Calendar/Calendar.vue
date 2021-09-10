@@ -1,4 +1,4 @@
-<template src="./Calendar.html"></template>
+<template src="./Calendar.html" />
 
 <script>
 export default {

@@ -12,7 +12,7 @@ import ProjectSummary from "@/views/Project/Summary/ProjectSummary.vue";
 import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
 import InboxRead from "@/views/Inbox/Read/Read.vue";
 import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
-import Dashboard2 from "@/components/Sidebar/Dashboard2.vue";
+import Dashboard from "@/views/Dashboard/Dashboard.vue";
 
 Vue.use(VueRouter);
 
@@ -25,7 +25,52 @@ const routes = [
       {
         path: "/",
         name: "Dashboard",
-        component: Dashboard2,
+        component: Dashboard,
+      },
+      {
+        path: "/calendar",
+        name: "calendar",
+        component: Calendar,
+      },
+      {
+        path: "/inbox",
+        name: "inbox",
+        component: InboxSummary,
+      },
+      {
+        path: "/inbox/read",
+        name: "inbox-read",
+        component: InboxRead,
+      },
+      {
+        path: "/inbox/compose",
+        name: "inbox-compose",
+        component: InboxCompose,
+      },
+      {
+        path: "/project-summary",
+        name: "project-summary",
+        component: ProjectSummary,
+      },
+      {
+        path: "/project/add",
+        name: "project-add",
+        component: ProjectAdd,
+      },
+      {
+        path: "/project-detail",
+        name: "project-detail",
+        component: ProjectDetail,
+      },
+      {
+        path: "/project-edit",
+        name: "project-edit",
+        component: ProjectEdit,
+      },
+      {
+        path: "/project-kanban",
+        name: "project-kanban",
+        component: ProjectKanban,
       },
     ],
   },
@@ -33,89 +78,11 @@ const routes = [
     path: "/login",
     name: "login",
     component: Login,
-    meta: {
-      breadcrumb: "login",
-    },
   },
   {
     path: "/forgot-password",
     name: "forgot-password",
     component: ForgotPassword,
-    meta: {
-      breadcrumb: "forgot-password",
-    },
-  },
-  {
-    path: "/calendar",
-    name: "calendar",
-    component: Calendar,
-    meta: {
-      breadcrumb: "calendar",
-    },
-  },
-  {
-    path: "/project-summary",
-    name: "project-summary",
-    component: ProjectSummary,
-    meta: {
-      breadcrumb: "project-summary",
-    },
-  },
-  {
-    path: "/project-add",
-    name: "project-add",
-    component: ProjectAdd,
-    meta: {
-      breadcrumb: "project-add",
-    },
-  },
-  {
-    path: "/project-detail",
-    name: "project-detail",
-    component: ProjectDetail,
-    meta: {
-      breadcrumb: "project-detail",
-    },
-  },
-  {
-    path: "/project-edit",
-    name: "project-edit",
-    component: ProjectEdit,
-    meta: {
-      breadcrumb: "project-edit",
-    },
-  },
-  {
-    path: "/project-kanban",
-    name: "project-kanban",
-    component: ProjectKanban,
-    meta: {
-      breadcrumb: "project-kanban",
-    },
-  },
-  {
-    path: "/inbox",
-    name: "inbox",
-    component: InboxSummary,
-    meta: {
-      breadcrumb: "inbox",
-    },
-  },
-  {
-    path: "/inbox/read",
-    name: "inbox-read",
-    component: InboxRead,
-    meta: {
-      breadcrumb: "inbox-read",
-    },
-  },
-  {
-    path: "/inbox/compose",
-    name: "inbox-compose",
-    component: InboxCompose,
-    meta: {
-      breadcrumb: "inbox-compose",
-    },
   },
 ];
 

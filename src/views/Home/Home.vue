@@ -7,6 +7,7 @@
         <Navbar></Navbar>
         <Sidebar></Sidebar>
         <router-view />
+        <Footer></Footer>
       <!-- </v-main> -->
 
       <!-- <Footer /> -->
@@ -18,14 +19,16 @@
 /* eslint-disable vue/no-unused-components */
 // import Header from "@/components/Header";
 // import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar/Navbar.vue"
+import Navbar from "@/components/Navbar.vue"
 import Sidebar from "@/components/Sidebar/Sidebar.vue"
+import Footer from "@/components/Footer.vue"
 
 export default {
   name: "Home",
   components: {
     Navbar,
     Sidebar,
+    Footer,
   },
 };
 </script>

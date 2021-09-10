@@ -4,16 +4,23 @@
 
 1. Đã làm
 
-- Bỏ nested named views vào Home. Mới chỉ update cho Dashboard, các component còn lại chưa thay đổi
+- Bỏ nested named views vào tất cả views.
+- Tạo component footer.
+- Chính thức uninstall vue-2-breadcrumbs. Breadcrumb.vue --> Chuyển vào folder archive
 
 2. Chưa làm:
 
 - Refactoring: NavLink đang copy paste.
-- Thiếu component header, footer.
 - Chưa tích hợp Vuetify. Nhưng nếu adminlte đã dùng bootstrap thì cần không?
 - index.js: path "" đang để tạm
+- Chưa biết để Project Kanban ở đâu + Sidebar ko sáng Project Summary
+- Preloader chưa có JS nên chưa xài được
 
-3. Dự định cho phiên bản kế tiếp
+3. Bug
+
+- Dù dùng template src nhưng file html import vào phải có 1 thẻ root (xem Dashboard.html)
+- Inbox: Compose >< Summary bị lệch
+- Do dùng chung navbar, các views đều hiển thị mà ko cần login => Mới vào phải bắt Login trước?
 
 ## De serve project:
 

@@ -55,7 +55,7 @@
         >
           <!-- Dashboard -->
           <li class="nav-item">
-            <router-link to="/" class="nav-link" active-class="active">
+            <router-link to="/" class="nav-link" exact-active-class="active">
               <i class="nav-icon fas fa-home"></i>
               <p>Dashboard</p>
             </router-link>
