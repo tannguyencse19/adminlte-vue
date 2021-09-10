@@ -1,6 +1,6 @@
 # e-project
 
-## Cập nhật UI 0.0.5.1
+## Cập nhật UI 0.0.5.2
 
 1. Đã làm
 
