@@ -6,4 +6,4 @@ export default {
 };
 </script>
 
-<style src="./ProjectKanban.css" scoped />
+<style scoped />

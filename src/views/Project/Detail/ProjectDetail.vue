@@ -6,4 +6,4 @@ export default {
 };
 </script>
 
-<style src="./ProjectDetail.css" scoped />
+<style scoped />

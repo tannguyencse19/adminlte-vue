@@ -6,4 +6,4 @@ export default {
 }
 </script>
 
-<style src="./Compose.css" scoped>
+<style scoped>

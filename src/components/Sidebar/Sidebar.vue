@@ -133,5 +133,5 @@ export default {
 };
 </script>
 
-<style src="./Sidebar.css" scoped>
+<style scoped>
 </style>

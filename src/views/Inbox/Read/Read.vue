@@ -6,4 +6,4 @@ export default {
 }
 </script>
 
-<style src="./Read.css" scoped>
+<style scoped>

@@ -8,4 +8,4 @@ export default {
   name: "Login",
 };
 </script>
-<style src="./main.css" scoped ></style>
+<style  scoped ></style>
