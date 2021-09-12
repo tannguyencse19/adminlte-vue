@@ -5,13 +5,18 @@
 1. Đã làm
 
 - Chốt view chỉ dùng HTML + CSS; Bỏ JS vào là phụ
+- View đăng ký
+- Xoá search project trogn sidebar
+- Test profile (bootdey + timeline adminlte)
 
 2. Chưa làm:
 
 - Tập hợp CSS lại và install vào library chứ ko thể chèn vào từng file
-- View đăng ký
+- Cần sát nhập Profile theo chuẩn adminlte
 
 3. Bug
+
+- Lỗi ko render được Profile?
 
 ## De serve project:
 

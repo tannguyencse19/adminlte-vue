@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Home from "@/views/Home/Home.vue";
 import Login from "@/views/Auth/Login.vue";
 import ForgotPassword from "@/views/Auth/ForgotPassword.vue";
+import Register from "@/views/Auth/Register.vue";
 import Calendar from "@/views/Calendar/Calendar.vue";
 import ProjectAdd from "@/views/Project/Add/ProjectAdd.vue";
 import ProjectDetail from "@/views/Project/Detail/ProjectDetail.vue";
@@ -13,6 +14,8 @@ import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
 import InboxRead from "@/views/Inbox/Read/Read.vue";
 import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
 import Dashboard from "@/views/Dashboard/Dashboard.vue";
+import Profile from "@/views/Profile/Profile.vue";
+// import ProfileActivity from "@/views/Profile/Activity.vue";
 
 Vue.use(VueRouter);
 
@@ -84,6 +87,21 @@ const routes = [
     name: "forgot-password",
     component: ForgotPassword,
   },
+  {
+    path: "/register",
+    name: "register",
+    component: Register,
+  },
+  {
+    path: "/profile",
+    name: "profile",
+    component: Profile,
+  },
+  // {
+  //   path: "/activity",
+  //   name: "activity",
+  //   component: ProfileActivity,
+  // },
 ];
 
 const router = new VueRouter({
