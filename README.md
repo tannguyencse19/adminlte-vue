@@ -8,6 +8,9 @@
 
 2. Chưa làm:
 
+- Tập hợp CSS lại và install vào library chứ ko thể chèn vào từng file
+- View đăng ký
+
 3. Bug
 
 ## De serve project:
