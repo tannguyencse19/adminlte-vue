@@ -20,7 +20,7 @@
 // import Header from "@/components/Header";
 // import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar.vue"
-import Sidebar from "@/components/Sidebar/Sidebar.vue"
+import Sidebar from "@/components/Sidebar.vue"
 import Footer from "@/components/Footer.vue"
 
 export default {
