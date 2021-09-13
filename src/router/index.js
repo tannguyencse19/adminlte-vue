@@ -14,8 +14,7 @@ import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
 import InboxRead from "@/views/Inbox/Read/Read.vue";
 import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
 import Dashboard from "@/views/Dashboard/Dashboard.vue";
-import Profile from "@/views/Profile/Profile.vue";
-// import ProfileActivity from "@/views/Profile/Activity.vue";
+import Profile from "@/views/User/Profile.vue";
 
 Vue.use(VueRouter);
 
@@ -29,6 +28,11 @@ const routes = [
         path: "/",
         name: "Dashboard",
         component: Dashboard,
+      },
+      {
+        path: "/profile",
+        name: "profile",
+        component: Profile,
       },
       {
         path: "/calendar",
@@ -92,16 +96,7 @@ const routes = [
     name: "register",
     component: Register,
   },
-  {
-    path: "/profile",
-    name: "profile",
-    component: Profile,
-  },
-  // {
-  //   path: "/activity",
-  //   name: "activity",
-  //   component: ProfileActivity,
-  // },
+
 ];
 
 const router = new VueRouter({

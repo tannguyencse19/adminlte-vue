@@ -24,7 +24,7 @@
           />
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+          <router-link to="/profile" class="d-block">Alexander Pierce</router-link>
         </div>
       </div>
 

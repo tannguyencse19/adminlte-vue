@@ -4,19 +4,15 @@
 
 1. Đã làm
 
-- Chốt view chỉ dùng HTML + CSS; Bỏ JS vào là phụ
-- View đăng ký
-- Xoá search project trogn sidebar
-- Test profile (bootdey + timeline adminlte)
+- User Profile views: Thêm tab-pane active; Form edit user profile
 
 2. Chưa làm:
 
-- Tập hợp CSS lại và install vào library chứ ko thể chèn vào từng file
-- Cần sát nhập Profile theo chuẩn adminlte
+- Gửi form? Validate?
+- responsive phần thông tin
+- Làm sao để parent component access thông tin user --> Cần hỏi anh Vũ cách implement
 
 3. Bug
-
-- Lỗi ko render được Profile?
 
 ## De serve project:
 
