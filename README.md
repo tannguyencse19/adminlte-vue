@@ -11,6 +11,7 @@
 - Gửi form? Validate?
 - responsive phần thông tin
 - Làm sao để parent component access thông tin user --> Cần hỏi anh Vũ cách implement
+- User profile active-class chưa hoạt động
 
 3. Bug
 
