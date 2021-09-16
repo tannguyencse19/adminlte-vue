@@ -1,17 +1,12 @@
 # e-project
 
-## Cập nhật UI 0.0.6.1
+## Cập nhật UI 0.0.7.2
 
 1. Đã làm
 
-- User Profile views: Thêm tab-pane active; Form edit user profile
+- User List views demo (dùng Vuetify)
 
 2. Chưa làm:
-
-- Gửi form? Validate?
-- responsive phần thông tin
-- Làm sao để parent component access thông tin user --> Cần hỏi anh Vũ cách implement
-- User profile active-class chưa hoạt động
 
 3. Bug
 
