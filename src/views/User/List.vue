@@ -45,12 +45,11 @@ export default {
   name: "UserList",
   data: () => ({
     headers: [
-      { text: "Dessert (100g serving)", value: "name" },
-      { text: "Calories", value: "calories" },
-      { text: "Fat (g)", value: "fat" },
-      { text: "Carbs (g)", value: "carbs" },
-      { text: "Protein (g)", value: "protein" },
-      { text: "Iron (%)", value: "iron" },
+      { text: "Employee Name", value: "name" },
+      { text: "Username", value: "username" },
+      { text: "Email", value: "email" },
+      { text: "Role", value: "role" },
+      { text: "Status", value: "status" },
     ],
     desserts: UserList,
   }),
