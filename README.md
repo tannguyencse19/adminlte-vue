@@ -9,6 +9,8 @@
 
 2. Chưa làm:
 
+- Thay cột id = code
+- Xem thông tin chi tiết nhân view (View profile)
 - Styling
 
 3. Bug
