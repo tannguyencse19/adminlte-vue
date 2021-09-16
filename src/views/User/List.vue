@@ -23,6 +23,7 @@
       <!-- Main content -->
       <section class="content">
         <!-- Vuetify component start here -->
+
         <v-app>
           <v-data-table
             :headers="headers"
@@ -38,11 +39,11 @@
                       New Item
                     </v-btn>
                   </template>
+
                   <v-card>
                     <v-card-title>
                       <span class="text-h5">{{ formTitle }}</span>
                     </v-card-title>
-
                     <v-card-text>
                       <v-container>
                         <v-row>
@@ -59,13 +60,13 @@
                             ></v-text-field>
                           </v-col>
                           <v-col cols="12" sm="6" md="4">
-                            <v-text-field v-model="editedItem.email" label="email (g)"></v-text-field>
+                            <v-text-field
+                              v-model="editedItem.email"
+                              label="email (g)"
+                            ></v-text-field>
                           </v-col>
                           <v-col cols="12" sm="6" md="4">
-                            <v-text-field
-                              v-model="editedItem.role"
-                              label="role (g)"
-                            ></v-text-field>
+                            <v-text-field v-model="editedItem.role" label="role (g)"></v-text-field>
                           </v-col>
                           <v-col cols="12" sm="6" md="4">
                             <v-text-field
@@ -98,6 +99,16 @@
                     </v-card-actions>
                   </v-card>
                 </v-dialog>
+
+                <download-excel
+                  class="btn btn-default"
+                  :fields="headersToExport"
+                  :data="desserts"
+                  worksheet="My Worksheet"
+                  name="test.xls"
+                >
+                  Export
+                </download-excel>
               </v-toolbar>
             </template>
 
@@ -119,6 +130,10 @@
 
 <script>
 import UserList from "@/json/UserList.json";
+import Vue from "vue";
+import JsonExcel from "vue-json-excel";
+
+Vue.component("downloadExcel", JsonExcel);
 
 export default {
   name: "UserList",
@@ -131,6 +146,12 @@ export default {
       { text: "Status", value: "status" },
       { text: "Actions", value: "actions", sortable: false },
     ],
+    headersToExport: {
+      "Employee name": "name",
+      Username: "username",
+      Email: "email",
+      Role: "role",
+    },
     desserts: [],
     dialog: false,
     dialogDelete: false,

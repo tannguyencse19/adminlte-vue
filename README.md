@@ -5,8 +5,11 @@
 1. Đã làm
 
 - User List views demo (dùng Vuetify)
+- Export to excel demo
 
 2. Chưa làm:
+
+- Styling
 
 3. Bug
 

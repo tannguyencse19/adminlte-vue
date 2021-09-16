@@ -16,7 +16,6 @@ import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
 import Dashboard from "@/views/Dashboard/Dashboard.vue";
 import UserProfile from "@/views/User/Profile.vue";
 import UserList from "@/views/User/List.vue";
-import UserListVuetify from "@/views/User/Vuetify.vue";
 
 Vue.use(VueRouter);
 
@@ -85,11 +84,6 @@ const routes = [
         path: "/user-list",
         name: "user-list",
         component: UserList,
-      },
-      {
-        path: "/user-list2",
-        name: "user-list2",
-        component: UserListVuetify,
       },
     ],
   },
