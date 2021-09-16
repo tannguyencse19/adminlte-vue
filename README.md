@@ -1,16 +1,15 @@
 # e-project
 
-## Cập nhật UI 0.0.7.2
+## Cập nhật UI 0.0.7.4
 
 1. Đã làm
 
-- User List views demo (dùng Vuetify)
-- Export to excel demo
+- Thay cột id = code
+- Btn xem profile
 
 2. Chưa làm:
 
-- Thay cột id = code
-- Xem thông tin chi tiết nhân view (View profile)
+- Cần thảo luận: Xem nhân viên bằng cách nào (truyền id bằng query vào router-link hay gì đó?)
 - Styling
 
 3. Bug

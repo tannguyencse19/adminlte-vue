@@ -115,6 +115,7 @@
             <template v-slot:item.actions="{ item }">
               <v-icon small class="mr-2" @click="editItem(item)">mdi-pencil</v-icon>
               <v-icon small @click="deleteItem(item)">mdi-delete</v-icon>
+              <v-btn icon to="/profile"><v-icon small @click="viewItem(item)">mdi-eye</v-icon></v-btn>
             </template>
             <template v-slot:no-data>
               <v-btn color="primary" @click="initialize">Reset</v-btn>
@@ -139,6 +140,7 @@ export default {
   name: "UserList",
   data: () => ({
     headers: [
+      { text: "Code", value: "code" },
       { text: "Employee Name", value: "name" },
       { text: "Username", value: "username" },
       { text: "Email", value: "email" },
@@ -147,6 +149,7 @@ export default {
       { text: "Actions", value: "actions", sortable: false },
     ],
     headersToExport: {
+      Code: "code",
       "Employee name": "name",
       Username: "username",
       Email: "email",
@@ -204,6 +207,11 @@ export default {
       this.editedIndex = this.desserts.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialogDelete = true;
+    },
+
+    // eslint-disable-next-line no-unused-vars
+    viewItem(item) {
+      console.log("Chuc nang chua hien thuc");
     },
 
     deleteItemConfirm() {
