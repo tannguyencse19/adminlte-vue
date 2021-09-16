@@ -109,6 +109,8 @@
                 >
                   Export
                 </download-excel>
+
+                <input type="file" id="input" />
               </v-toolbar>
             </template>
 
@@ -133,8 +135,17 @@
 import UserList from "@/json/UserList.json";
 import Vue from "vue";
 import JsonExcel from "vue-json-excel";
-
 Vue.component("downloadExcel", JsonExcel);
+
+// eslint-disable-next-line no-unused-vars
+import readXlsxFile from 'read-excel-file'
+// const input = document.getElementById('input')
+// input.addEventListener('change', () => {
+//   readXlsxFile(input.files[0]).then((rows) => {
+//     // `rows` is an array of rows
+//     // each row being an array of cells.
+//   })
+// })
 
 export default {
   name: "UserList",

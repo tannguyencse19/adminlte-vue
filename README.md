@@ -1,15 +1,13 @@
 # e-project
 
-## Cập nhật UI 0.0.7.4
+## Cập nhật UI 0.0.7.5
 
 1. Đã làm
 
-- Thay cột id = code
-- Btn xem profile
+- Import excel to Vue
 
 2. Chưa làm:
 
-- Cần thảo luận: Xem nhân viên bằng cách nào (truyền id bằng query vào router-link hay gì đó?)
 - Styling
 
 3. Bug
