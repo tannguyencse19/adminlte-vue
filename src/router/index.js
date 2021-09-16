@@ -14,7 +14,8 @@ import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
 import InboxRead from "@/views/Inbox/Read/Read.vue";
 import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
 import Dashboard from "@/views/Dashboard/Dashboard.vue";
-import Profile from "@/views/User/Profile.vue";
+import UserProfile from "@/views/User/Profile.vue";
+import UserList from "@/views/User/List.vue";
 
 Vue.use(VueRouter);
 
@@ -32,7 +33,7 @@ const routes = [
       {
         path: "/profile",
         name: "profile",
-        component: Profile,
+        component: UserProfile,
       },
       {
         path: "/calendar",
@@ -78,6 +79,11 @@ const routes = [
         path: "/project/kanban",
         name: "project-kanban",
         component: ProjectKanban,
+      },
+      {
+        path: "/user-list",
+        name: "user-list",
+        component: UserList,
       },
     ],
   },

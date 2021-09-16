@@ -71,6 +71,13 @@
               <p>Project Summary</p>
             </router-link>
           </li>
+          <!-- User List -->
+          <li class="nav-item">
+            <router-link to="/user-list" class="nav-link" active-class="active">
+              <i class="nav-icon fas fa-user"></i>
+              <p>User List</p>
+            </router-link>
+          </li>
           <!-- WORK OVERVIEW treeview -->
           <!-- <li class="nav-item menu-open">
               <a href="#" class="nav-link">
