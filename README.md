@@ -4,10 +4,11 @@
 
 1. Đã làm
 
-- Import excel to Vue
+- Đổi package imp/exp excel: https://panjiachen.github.io/vue-element-admin-site/feature/component/excel.html
 
 2. Chưa làm:
 
+- Thử các loại export khác nhau - Hay chốt 1 loại?
 - Styling
 
 3. Bug

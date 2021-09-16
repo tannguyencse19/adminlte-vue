@@ -100,15 +100,9 @@
                   </v-card>
                 </v-dialog>
 
-                <download-excel
-                  class="btn btn-default"
-                  :fields="headersToExport"
-                  :data="desserts"
-                  worksheet="My Worksheet"
-                  name="test.xls"
-                >
-                  Export
-                </download-excel>
+                <v-btn @click="handleDownload">Download</v-btn>
+
+                <import-excel :on-success="handleSuccess"></import-excel>
 
                 <input type="file" id="input" />
               </v-toolbar>
@@ -117,7 +111,9 @@
             <template v-slot:item.actions="{ item }">
               <v-icon small class="mr-2" @click="editItem(item)">mdi-pencil</v-icon>
               <v-icon small @click="deleteItem(item)">mdi-delete</v-icon>
-              <v-btn icon to="/profile"><v-icon small @click="viewItem(item)">mdi-eye</v-icon></v-btn>
+              <v-btn icon to="/profile">
+                <v-icon small @click="viewItem(item)">mdi-eye</v-icon>
+              </v-btn>
             </template>
             <template v-slot:no-data>
               <v-btn color="primary" @click="initialize">Reset</v-btn>
@@ -133,12 +129,10 @@
 
 <script>
 import UserList from "@/json/UserList.json";
-import Vue from "vue";
-import JsonExcel from "vue-json-excel";
-Vue.component("downloadExcel", JsonExcel);
+import ImportExcel from "./Import.vue"
 
 // eslint-disable-next-line no-unused-vars
-import readXlsxFile from 'read-excel-file'
+import readXlsxFile from "read-excel-file";
 // const input = document.getElementById('input')
 // input.addEventListener('change', () => {
 //   readXlsxFile(input.files[0]).then((rows) => {
@@ -149,6 +143,9 @@ import readXlsxFile from 'read-excel-file'
 
 export default {
   name: "UserList",
+  components: {
+    ImportExcel,
+  },
   data: () => ({
     headers: [
       { text: "Code", value: "code" },
@@ -254,6 +251,26 @@ export default {
       }
       this.close();
     },
+
+    handleDownload() {
+      this.downloadLoading = true;
+      import("./Export2Excel").then((excel) => {
+        const tHeader = ["Code", "Employee Name", "Username", "Email", "Role"];
+        const filterVal = ["code", "name", "username", "email", "role"];
+        const data = UserList.map((row) => filterVal.map((col) => row[col]));
+        excel.export_json_to_excel({
+          header: tHeader,
+          data,
+          filename: "test-export",
+          // bookType: , (xlsx default), csv, txt
+        });
+      });
+    },
+
+    handleSuccess({ results, header }) {
+      console.log(header);
+      console.log(results);
+    }
   },
 };
 </script>
