@@ -4,11 +4,14 @@
 
 1. Đã làm
 
-- Đổi package imp/exp excel: https://panjiachen.github.io/vue-element-admin-site/feature/component/excel.html
+- Sửa footer
+- Import
 
 2. Chưa làm:
 
 - Thử các loại export khác nhau - Hay chốt 1 loại?
+- Định dạng import: Headers, Data import key bị sai
+- Component chưa giữ lại dữ liệu mỗi khi import (do created đang để rỗng)
 - Styling
 
 3. Bug

@@ -27,7 +27,7 @@
         <v-app>
           <v-data-table
             :headers="headers"
-            :items="desserts"
+            :items="userList"
             :items-per-page="10"
             class="elevation-1"
           >
@@ -103,8 +103,6 @@
                 <v-btn @click="handleDownload">Download</v-btn>
 
                 <import-excel :on-success="handleSuccess"></import-excel>
-
-                <input type="file" id="input" />
               </v-toolbar>
             </template>
 
@@ -116,7 +114,7 @@
               </v-btn>
             </template>
             <template v-slot:no-data>
-              <v-btn color="primary" @click="initialize">Reset</v-btn>
+              <v-btn color="primary" @click="fetchData">Reset</v-btn>
             </template>
           </v-data-table>
         </v-app>
@@ -130,16 +128,6 @@
 <script>
 import UserList from "@/json/UserList.json";
 import ImportExcel from "./Import.vue"
-
-// eslint-disable-next-line no-unused-vars
-import readXlsxFile from "read-excel-file";
-// const input = document.getElementById('input')
-// input.addEventListener('change', () => {
-//   readXlsxFile(input.files[0]).then((rows) => {
-//     // `rows` is an array of rows
-//     // each row being an array of cells.
-//   })
-// })
 
 export default {
   name: "UserList",
@@ -156,14 +144,7 @@ export default {
       { text: "Status", value: "status" },
       { text: "Actions", value: "actions", sortable: false },
     ],
-    headersToExport: {
-      Code: "code",
-      "Employee name": "name",
-      Username: "username",
-      Email: "email",
-      Role: "role",
-    },
-    desserts: [],
+    userList: [],
     dialog: false,
     dialogDelete: false,
     editedIndex: -1,
@@ -198,21 +179,21 @@ export default {
   },
 
   created() {
-    this.initialize();
+    this.fetchData();
   },
 
   methods: {
-    initialize() {
-      this.desserts = UserList;
+    fetchData(data) {
+      this.userList = data;
     },
     editItem(item) {
-      this.editedIndex = this.desserts.indexOf(item);
+      this.editedIndex = this.userList.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialog = true;
     },
 
     deleteItem(item) {
-      this.editedIndex = this.desserts.indexOf(item);
+      this.editedIndex = this.userList.indexOf(item);
       this.editedItem = Object.assign({}, item);
       this.dialogDelete = true;
     },
@@ -223,7 +204,7 @@ export default {
     },
 
     deleteItemConfirm() {
-      this.desserts.splice(this.editedIndex, 1);
+      this.userList.splice(this.editedIndex, 1);
       this.closeDelete();
     },
 
@@ -245,9 +226,9 @@ export default {
 
     save() {
       if (this.editedIndex > -1) {
-        Object.assign(this.desserts[this.editedIndex], this.editedItem);
+        Object.assign(this.userList[this.editedIndex], this.editedItem);
       } else {
-        this.desserts.push(this.editedItem);
+        this.userList.push(this.editedItem);
       }
       this.close();
     },
@@ -255,11 +236,10 @@ export default {
     handleDownload() {
       this.downloadLoading = true;
       import("./Export2Excel").then((excel) => {
-        const tHeader = ["Code", "Employee Name", "Username", "Email", "Role"];
         const filterVal = ["code", "name", "username", "email", "role"];
         const data = UserList.map((row) => filterVal.map((col) => row[col]));
         excel.export_json_to_excel({
-          header: tHeader,
+          header: filterVal,
           data,
           filename: "test-export",
           // bookType: , (xlsx default), csv, txt
@@ -270,6 +250,7 @@ export default {
     handleSuccess({ results, header }) {
       console.log(header);
       console.log(results);
+      this.fetchData(results);
     }
   },
 };
