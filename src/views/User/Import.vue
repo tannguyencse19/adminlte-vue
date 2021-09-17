@@ -13,6 +13,7 @@
         :loading="loading"
         style="margin-left: 16px"
         @click="handleUpload"
+        color="secondary"
       >
         Browse
       </v-btn>

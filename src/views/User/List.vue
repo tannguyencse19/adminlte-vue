@@ -25,6 +25,7 @@
         <!-- Vuetify component start here -->
 
         <v-app>
+          <import-excel :on-success="handleSuccess" />
           <v-data-table
             :headers="headers"
             :items="userList"
@@ -32,10 +33,10 @@
             class="elevation-1"
           >
             <template v-slot:top>
-              <v-toolbar flat>
+              <v-toolbar flat class="justify-space-between">
                 <v-dialog v-model="dialog" max-width="500px">
                   <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="primary" dark class="mb-2" v-bind="attrs" v-on="on">
+                    <v-btn color="success" dark v-bind="attrs" v-on="on">
                       New Item
                     </v-btn>
                   </template>
@@ -86,6 +87,8 @@
                   </v-card>
                 </v-dialog>
 
+                <v-btn color="primary" @click="handleDownload">Download</v-btn>
+
                 <v-dialog v-model="dialogDelete" max-width="500px">
                   <v-card>
                     <v-card-title class="text-h5">
@@ -99,10 +102,6 @@
                     </v-card-actions>
                   </v-card>
                 </v-dialog>
-
-                <v-btn @click="handleDownload">Download</v-btn>
-
-                <import-excel :on-success="handleSuccess"></import-excel>
               </v-toolbar>
             </template>
 
@@ -113,8 +112,13 @@
                 <v-icon small @click="viewItem(item)">mdi-eye</v-icon>
               </v-btn>
             </template>
+
             <template v-slot:no-data>
               <v-btn color="primary" @click="fetchData">Reset</v-btn>
+            </template>
+
+            <template v-slot:item.role="{ item }">
+              <span class="blue--text">{{ item.role }}</span>
             </template>
           </v-data-table>
         </v-app>
@@ -127,7 +131,7 @@
 
 <script>
 import UserList from "@/json/UserList.json";
-import ImportExcel from "./Import.vue"
+import ImportExcel from "./Import.vue";
 
 export default {
   name: "UserList",
@@ -251,10 +255,13 @@ export default {
       console.log(header);
       console.log(results);
       this.fetchData(results);
-    }
+    },
   },
 };
 </script>
 
-<style>
+<style scoped>
+header >>> .v-toolbar__content {
+  justify-content: space-between;
+}
 </style>

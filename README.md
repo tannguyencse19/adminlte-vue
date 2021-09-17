@@ -13,6 +13,7 @@
 - Định dạng import: Headers, Data import key bị sai
 - Component chưa giữ lại dữ liệu mỗi khi import (do created đang để rỗng)
 - Styling
+- Refactoring
 
 3. Bug
 
