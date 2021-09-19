@@ -91,6 +91,7 @@ export default {
     },
     readerData(rawFile) {
       this.loading = true;
+      // eslint-disable-next-line no-unused-vars
       return new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.onload = (e) => {

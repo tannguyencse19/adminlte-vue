@@ -130,14 +130,14 @@
 </template>
 
 <script>
-import UserList from "@/json/UserList.json";
 import ImportExcel from "./Import.vue";
 
 export default {
-  name: "UserList",
+  name: "List",
   components: {
     ImportExcel,
   },
+  props: ["dataProp"],
   data: () => ({
     headers: [
       { text: "Code", value: "code" },
@@ -180,10 +180,13 @@ export default {
     dialogDelete(val) {
       val || this.closeDelete();
     },
+    dataProp: function(newVal) {
+      this.fetchData(newVal);
+    }
   },
 
   created() {
-    this.fetchData();
+    this.fetchData(this.dataProp);
   },
 
   methods: {
@@ -241,7 +244,7 @@ export default {
       this.downloadLoading = true;
       import("./Export2Excel").then((excel) => {
         const filterVal = ["code", "name", "username", "email", "role"];
-        const data = UserList.map((row) => filterVal.map((col) => row[col]));
+        const data = this.userList.map((row) => filterVal.map((col) => row[col]));
         excel.export_json_to_excel({
           header: filterVal,
           data,

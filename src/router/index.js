@@ -15,7 +15,9 @@ import InboxRead from "@/views/Inbox/Read/Read.vue";
 import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
 import Dashboard from "@/views/Dashboard/Dashboard.vue";
 import UserProfile from "@/views/User/Profile.vue";
-import UserList from "@/views/User/List.vue";
+import List from "@/views/User/List.vue";
+import UserList from "@/json/UserList.json";
+import AdminList from "@/json/AdminList.json";
 
 Vue.use(VueRouter);
 
@@ -83,7 +85,14 @@ const routes = [
       {
         path: "/user-list",
         name: "user-list",
-        component: UserList,
+        component: List,
+        props: { dataProp: UserList },
+      },
+      {
+        path: "/admin-list",
+        name: "admin-list",
+        component: List,
+        props: { dataProp: AdminList },
       },
     ],
   },

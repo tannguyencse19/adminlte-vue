@@ -1,11 +1,10 @@
 # e-project
 
-## Cập nhật UI 0.0.7.5
+## Cập nhật UI 0.0.7.7
 
 1. Đã làm
 
-- Sửa footer
-- Import
+- Thêm Admin list (giống y chang user list)
 
 2. Chưa làm:
 
@@ -14,6 +13,7 @@
 - Component chưa giữ lại dữ liệu mỗi khi import (do created đang để rỗng)
 - Styling
 - Refactoring
+- Axios + JSON server
 
 3. Bug
 

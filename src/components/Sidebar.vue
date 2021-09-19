@@ -78,6 +78,13 @@
               <p>User List</p>
             </router-link>
           </li>
+          <!-- Admin List -->
+          <li class="nav-item">
+            <router-link to="/admin-list" class="nav-link" active-class="active">
+              <i class="nav-icon fas fa-admin"></i>
+              <p>Admin List</p>
+            </router-link>
+          </li>
           <!-- WORK OVERVIEW treeview -->
           <!-- <li class="nav-item menu-open">
               <a href="#" class="nav-link">
