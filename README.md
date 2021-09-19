@@ -4,9 +4,9 @@
 
 1. Đã làm
 
-- Vuetify calendar
-
 2. Chưa làm:
+
+- Integrate các chức năng trong docs
 
 3. Bug
 
