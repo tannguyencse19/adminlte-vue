@@ -4,7 +4,7 @@
 
 1. Đã làm
 
-- Thêm Admin list (giống y chang user list)
+- Thêm Admin list (giống y chang user list).
 
 2. Chưa làm:
 
@@ -13,7 +13,7 @@
 - Component chưa giữ lại dữ liệu mỗi khi import (do created đang để rỗng)
 - Styling
 - Refactoring
-- Axios + JSON server
+- Đang pass data to List component dùng router props + watcher. Đáng ra dùng Axios + JSON server
 
 3. Bug
 

@@ -81,7 +81,7 @@
           <!-- Admin List -->
           <li class="nav-item">
             <router-link to="/admin-list" class="nav-link" active-class="active">
-              <i class="nav-icon fas fa-admin"></i>
+              <i class="nav-icon fas fa-user-lock"></i>
               <p>Admin List</p>
             </router-link>
           </li>
