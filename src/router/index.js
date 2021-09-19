@@ -111,7 +111,6 @@ const routes = [
     name: "register",
     component: Register,
   },
-
 ];
 
 const router = new VueRouter({

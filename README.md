@@ -4,16 +4,9 @@
 
 1. Đã làm
 
-- Thêm Admin list (giống y chang user list).
+- Vuetify calendar
 
 2. Chưa làm:
-
-- Thử các loại export khác nhau - Hay chốt 1 loại?
-- Định dạng import: Headers, Data import key bị sai
-- Component chưa giữ lại dữ liệu mỗi khi import (do created đang để rỗng)
-- Styling
-- Refactoring
-- Đang pass data to List component dùng router props + watcher. Đáng ra dùng Axios + JSON server
 
 3. Bug
 
