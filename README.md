@@ -1,14 +1,15 @@
 # e-project
 
-## Cập nhật UI 0.0.8.1
+## Cập nhật UI 0.0.9
 
 1. Đã làm
 
-- Fixed modal click vào event bị tràn (v-menu)
+- Install style qua npm thay vì dùng file
+- Xoá hết adminlte js
 
 2. Chưa làm:
 
-- Calendar: drag and drop, day body (chưa integrate được)
+- Summernote (cái soạn tin nhắn) -> Tiptap vuetify
 
 3. Bug
 

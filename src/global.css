@@ -1,13 +1,8 @@
 /* ~@: https://github.com/vuejs/vue-cli/issues/3750 */
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback");
-@import url("~@/plugins/fontawesome-free/css/all.min.css");
 @import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
-@import url("~@/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css");
-@import url("~@/plugins/icheck-bootstrap/icheck-bootstrap.min.css");
-@import url("~@/plugins/jqvmap/jqvmap.min.css");
 @import url("~@/plugins/dist/css/adminlte.min.css");
-@import url("~@/plugins/overlayScrollbars/css/OverlayScrollbars.min.css");
-@import url("~@/plugins/daterangepicker/daterangepicker.css");
+@import url("~@/plugins/fontawesome-free/css/all.min.css");
+@import url("~@/plugins/icheck-bootstrap/icheck-bootstrap.min.css");
 @import url("~@/plugins/summernote/summernote-bs4.min.css");
 
 /* Customize CSS */

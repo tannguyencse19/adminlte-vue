@@ -3,7 +3,8 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
-import "roboto-fontface/css/roboto/roboto-fontface.css";
+import "roboto-fontface/css/roboto/roboto-fontface.css"; //https://www.npmjs.com/package/roboto-fontface
+import "source-sans/source-sans-3.css"
 import "@mdi/font/css/materialdesignicons.css";
 import "@/global.css"
 
