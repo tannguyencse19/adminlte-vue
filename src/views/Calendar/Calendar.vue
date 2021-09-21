@@ -77,11 +77,14 @@
                   @click:date="viewDay"
                   @change="updateRange"
                 ></v-calendar>
+                <!-- An vao event hien ra model -->
+                <!-- left dung de hien thi khong tran -->
                 <v-menu
                   v-model="selectedOpen"
                   :close-on-content-click="false"
                   :activator="selectedElement"
-                  offset-x
+                  left
+                  max-width="400px"
                 >
                   <v-card color="grey lighten-4" min-width="350px" flat>
                     <v-toolbar :color="selectedEvent.color" dark>
@@ -139,6 +142,7 @@ export default {
     this.$refs.calendar.checkChange();
   },
   methods: {
+    // Cac method tu documents
     viewDay({ date }) {
       this.focus = date;
       this.type = "day";

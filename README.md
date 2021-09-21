@@ -4,9 +4,12 @@
 
 1. Đã làm
 
+- Refactoring: chia thành nhiều file
+- Fixed modal click vào event bị tràn (v-menu)
+
 2. Chưa làm:
 
-- Integrate các chức năng trong docs
+- Calendar: drag and drop
 
 3. Bug
 
