@@ -8,7 +8,7 @@
 
 2. Chưa làm:
 
-- Calendar: drag and drop
+- Calendar: drag and drop, day body (chưa integrate được)
 
 3. Bug
 
