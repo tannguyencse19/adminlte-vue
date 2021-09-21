@@ -4,7 +4,6 @@
 
 1. Đã làm
 
-- Refactoring: chia thành nhiều file
 - Fixed modal click vào event bị tràn (v-menu)
 
 2. Chưa làm:
