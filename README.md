@@ -1,11 +1,10 @@
 # e-project
 
-## Cập nhật UI 0.0.9
+## Cập nhật UI 0.1.0
 
 1. Đã làm
 
-- Install style qua npm thay vì dùng file
-- Xoá hết adminlte js
+- Bắt đầu từ phiên bản này, mọi component của AdminLTE sẽ thay bằng Vuetify
 
 2. Chưa làm:
 
