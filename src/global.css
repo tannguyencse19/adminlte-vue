@@ -5,8 +5,3 @@
 @import url("~@/plugins/icheck-bootstrap/icheck-bootstrap.min.css");
 @import url("~@/plugins/summernote/summernote-bs4.min.css");
 
-/* Customize CSS */
-.control-sidebar {
-  width: 400px;
-  right: -400px;
-}
