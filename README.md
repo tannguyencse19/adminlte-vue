@@ -11,6 +11,8 @@
   - Tích vào thì hiện ra chỗ sửa luôn
   - Gộp 3 button vào thành dropdown
   - Search field: Có button trong dropdown -> Ấn vô hiện ra search field chứ ko để chành bành được
+- Test:
+  - Tìm hiểu cách để customize render row v-data-table dùng slot API có sẵn
 
 3. Bug
 
