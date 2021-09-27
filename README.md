@@ -1,14 +1,16 @@
 # e-project
 
-## Cập nhật UI 0.1.0
+## Cập nhật UI 0.1.10
 
 1. Đã làm
-
-- Bắt đầu từ phiên bản này, mọi component của AdminLTE sẽ thay bằng Vuetify
 
 2. Chưa làm:
 
 - Summernote (cái soạn tin nhắn) -> Tiptap vuetify
+- User/Admin List
+  - Tích vào thì hiện ra chỗ sửa luôn
+  - Gộp 3 button vào thành dropdown
+  - Search field: Có button trong dropdown -> Ấn vô hiện ra search field chứ ko để chành bành được
 
 3. Bug
 
