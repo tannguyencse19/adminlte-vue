@@ -33,83 +33,22 @@
             class="elevation-1"
           >
             <template v-slot:top>
-              <v-toolbar flat class="justify-space-between">
-                <v-dialog v-model="dialog" max-width="500px">
-                  <template v-slot:activator="{ on, attrs }">
-                    <v-btn color="success" dark v-bind="attrs" v-on="on">
-                      New Item
-                    </v-btn>
-                  </template>
-
-                  <v-card>
-                    <v-card-title>
-                      <span class="text-h5">{{ formTitle }}</span>
-                    </v-card-title>
-                    <v-card-text>
-                      <v-container>
-                        <v-row>
-                          <v-col cols="12" sm="6" md="4">
-                            <v-text-field
-                              v-model="editedItem.name"
-                              label="Dessert name"
-                            ></v-text-field>
-                          </v-col>
-                          <v-col cols="12" sm="6" md="4">
-                            <v-text-field
-                              v-model="editedItem.username"
-                              label="username"
-                            ></v-text-field>
-                          </v-col>
-                          <v-col cols="12" sm="6" md="4">
-                            <v-text-field
-                              v-model="editedItem.email"
-                              label="email (g)"
-                            ></v-text-field>
-                          </v-col>
-                          <v-col cols="12" sm="6" md="4">
-                            <v-text-field v-model="editedItem.role" label="role (g)"></v-text-field>
-                          </v-col>
-                          <v-col cols="12" sm="6" md="4">
-                            <v-text-field
-                              v-model="editedItem.status"
-                              label="status (g)"
-                            ></v-text-field>
-                          </v-col>
-                        </v-row>
-                      </v-container>
-                    </v-card-text>
-
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-                      <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
-                      <v-btn color="blue darken-1" text @click="save">Save</v-btn>
-                    </v-card-actions>
-                  </v-card>
-                </v-dialog>
-
-                <v-btn color="primary" @click="handleDownload">Download</v-btn>
-
-                <v-dialog v-model="dialogDelete" max-width="500px">
-                  <v-card>
-                    <v-card-title class="text-h5">
-                      Are you sure you want to delete this item?
-                    </v-card-title>
-                    <v-card-actions>
-                      <v-spacer></v-spacer>
-                      <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
-                      <v-btn color="blue darken-1" text @click="deleteItemConfirm">OK</v-btn>
-                      <v-spacer></v-spacer>
-                    </v-card-actions>
-                  </v-card>
-                </v-dialog>
-              </v-toolbar>
+              <v-menu offset-y>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-btn color="primary" dark v-bind="attrs" v-on="on">Dropdown</v-btn>
+                </template>
+                <v-list>
+                  <v-btn color="primary" @click="handleDownload">Download</v-btn>
+                  <v-btn color="success" @click.stop="addItem">New Item</v-btn>
+                </v-list>
+              </v-menu>
             </template>
 
             <template v-slot:item.actions="{ item }">
               <v-icon small class="mr-2" @click="editItem(item)">mdi-pencil</v-icon>
               <v-icon small @click="deleteItem(item)">mdi-delete</v-icon>
-              <v-btn icon to="/profile">
-                <v-icon small @click="viewItem(item)">mdi-eye</v-icon>
+              <v-btn icon to="/profile" @click="viewItem(item)">
+                <v-icon small>mdi-eye</v-icon>
               </v-btn>
             </template>
 
@@ -121,6 +60,53 @@
               <span class="blue--text">{{ item.role }}</span>
             </template>
           </v-data-table>
+          <v-dialog v-model="dialog" max-width="500px">
+            <v-card>
+              <v-card-title>
+                <span class="text-h5">{{ formTitle }}</span>
+              </v-card-title>
+              <v-card-text>
+                <v-container>
+                  <v-row>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field v-model="editedItem.name" label="Dessert name"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field v-model="editedItem.username" label="username"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field v-model="editedItem.email" label="email (g)"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field v-model="editedItem.role" label="role (g)"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" sm="6" md="4">
+                      <v-text-field v-model="editedItem.status" label="status (g)"></v-text-field>
+                    </v-col>
+                  </v-row>
+                </v-container>
+              </v-card-text>
+
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
+                <v-btn color="blue darken-1" text @click="save">Save</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+          <v-dialog v-model="dialogDelete" max-width="500px">
+            <v-card>
+              <v-card-title class="text-h5">
+                Are you sure you want to delete this item?
+              </v-card-title>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="blue darken-1" text @click="closeDelete">Cancel</v-btn>
+                <v-btn color="blue darken-1" text @click="deleteItemConfirm">OK</v-btn>
+                <v-spacer></v-spacer>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
         </v-app>
       </section>
     </div>
@@ -151,6 +137,7 @@ export default {
     userList: [],
     dialog: false,
     dialogDelete: false,
+    dropdown: false,
     editedIndex: -1,
     editedItem: {
       name: "",
@@ -174,15 +161,15 @@ export default {
   },
 
   watch: {
-    dialog(val) {
+    dialog: function (val) {
       val || this.close();
     },
-    dialogDelete(val) {
+    dialogDelete: function (val) {
       val || this.closeDelete();
     },
-    dataProp: function(newVal) {
+    dataProp: function (newVal) {
       this.fetchData(newVal);
-    }
+    },
   },
 
   created() {
@@ -193,6 +180,11 @@ export default {
     fetchData(data) {
       this.userList = data;
     },
+
+    addItem() {
+      this.dialog = true;
+    },
+
     editItem(item) {
       this.editedIndex = this.userList.indexOf(item);
       this.editedItem = Object.assign({}, item);
