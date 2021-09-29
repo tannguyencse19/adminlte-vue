@@ -7,17 +7,13 @@
       accept=".xlsx, .xls"
       @change="handleClick"
     />
-    <div class="drop" @drop="handleDrop" @dragover="handleDragover" @dragenter="handleDragover">
+    <!-- <div class="drop" @drop="handleDrop" @dragover="handleDragover" @dragenter="handleDragover">
       Drop excel file here or
-      <v-btn
-        :loading="loading"
-        style="margin-left: 16px"
-        @click="handleUpload"
-        color="secondary"
-      >
-        Browse
-      </v-btn>
-    </div>
+
+    </div> -->
+    <v-btn text block small :loading="loading" @click="handleUpload">
+      Import
+    </v-btn>
   </div>
 </template>
 

@@ -3,18 +3,41 @@
     <v-app>
       <div>
         <v-data-table :headers="headers" :items="desserts">
-          <template v-slot:item.name="props">
+          <v-for header in headers :key="header.text">
+            <template v-slot:header.text="propsAPI">
+              <v-edit-dialog
+                :return-value.sync="propsAPI.item.name"
+                @save="save"
+                @cancel="cancel"
+                @open="open"
+                @close="close"
+              >
+                {{ propsAPI.item.name }}
+                <template v-slot:input>
+                  <v-text-field
+                    v-model="propsAPI.item.name"
+                    :rules="[max25chars]"
+                    label="Edit"
+                    single-line
+                    counter
+                  ></v-text-field>
+                </template>
+              </v-edit-dialog>
+            </template>
+          </v-for>
+
+          <template v-slot:item.name="propsAPI">
             <v-edit-dialog
-              :return-value.sync="props.item.name"
+              :return-value.sync="propsAPI.item.name"
               @save="save"
               @cancel="cancel"
               @open="open"
               @close="close"
             >
-              {{ props.item.name }}
+              {{ propsAPI.item.name }}
               <template v-slot:input>
                 <v-text-field
-                  v-model="props.item.name"
+                  v-model="propsAPI.item.name"
                   :rules="[max25chars]"
                   label="Edit"
                   single-line
@@ -23,9 +46,9 @@
               </template>
             </v-edit-dialog>
           </template>
-          <template v-slot:item.iron="props">
+          <template v-slot:item.iron="propsAPI">
             <v-edit-dialog
-              :return-value.sync="props.item.iron"
+              :return-value.sync="propsAPI.item.iron"
               large
               persistent
               @save="save"
@@ -33,11 +56,11 @@
               @open="open"
               @close="close"
             >
-              <div>{{ props.item.iron }}</div>
+              <div>{{ propsAPI.item.iron }}</div>
               <template v-slot:input>
                 <div class="mt-4 text-h6">Update Iron</div>
                 <v-text-field
-                  v-model="props.item.iron"
+                  v-model="propsAPI.item.iron"
                   :rules="[max25chars]"
                   label="Edit"
                   single-line

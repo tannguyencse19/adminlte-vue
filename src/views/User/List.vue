@@ -25,23 +25,41 @@
         <!-- Vuetify component start here -->
 
         <v-app>
-          <import-excel :on-success="handleSuccess" />
           <v-data-table
             :headers="headers"
             :items="userList"
             :items-per-page="10"
             class="elevation-1"
+            :search="search"
           >
             <template v-slot:top>
-              <v-menu offset-y>
-                <template v-slot:activator="{ on, attrs }">
-                  <v-btn color="primary" dark v-bind="attrs" v-on="on">Dropdown</v-btn>
-                </template>
-                <v-list>
-                  <v-btn color="primary" @click="handleDownload">Download</v-btn>
-                  <v-btn color="success" @click.stop="addItem">New Item</v-btn>
-                </v-list>
-              </v-menu>
+              <v-container>
+                <v-row justify="space-between">
+                  <v-col cols="12" sm="4">
+                    <v-menu offset-y>
+                      <template v-slot:activator="{ on, attrs }">
+                        <v-btn color="primary" v-bind="attrs" v-on="on">Menu</v-btn>
+                      </template>
+                      <v-list>
+                        <v-btn text block small @click="handleDownload">Export</v-btn>
+                        <import-excel :on-success="handleSuccess" />
+                        <v-btn text block small @click.stop="addItem">New Item</v-btn>
+                      </v-list>
+                    </v-menu>
+                  </v-col>
+                  <v-col cols="12" sm="8">
+                    <v-text-field
+                      v-model="search"
+                      append-icon="mdi-magnify"
+                      label="Search"
+                      single-line
+                      hide-details
+                      dense
+                    />
+                  </v-col>
+                </v-row>
+              </v-container>
+              <div class="text-right"></div>
             </template>
 
             <template v-slot:item.actions="{ item }">
@@ -60,6 +78,7 @@
               <span class="blue--text">{{ item.role }}</span>
             </template>
           </v-data-table>
+
           <v-dialog v-model="dialog" max-width="500px">
             <v-card>
               <v-card-title>
@@ -153,6 +172,7 @@ export default {
       role: "",
       status: "",
     },
+    search: "",
   }),
   computed: {
     formTitle() {
@@ -246,9 +266,10 @@ export default {
       });
     },
 
+    // eslint-disable-next-line no-unused-vars
     handleSuccess({ results, header }) {
-      console.log(header);
-      console.log(results);
+      //console.log(header);
+      //console.log(results);
       this.fetchData(results);
     },
   },

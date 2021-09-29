@@ -1,28 +1,24 @@
 # e-project
 
-## Cập nhật UI 0.1.2
+## Cập nhật UI 0.1.3
 
 1. Đã làm
 
 - Gộp 3 button vào thành dropdown
+- Thêm search field
 
 2. Chưa làm:
 
 - Summernote (cái soạn tin nhắn) -> Tiptap vuetify
 - User/Admin List
-
-  - Search field: Có button trong dropdown -> Ấn vô hiện ra search field chứ ko để chành bành được
   - Tích vào thì hiện ra chỗ sửa luôn
-
-- Test:
-  - Tìm hiểu cách để customize render row v-data-table dùng slot API có sẵn
+    - Tìm hiểu cách để customize render row v-data-table dùng slot API có sẵn (test.vue)
 
 3. Bug
 
 - Tại sao add item lại lưu form được
   - Chưa hiểu watcher viết gì
   - this.nextTick?
-- Dropdown Styling
 
 ## De serve project:
 
