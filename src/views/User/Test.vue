@@ -2,74 +2,32 @@
   <div id="app">
     <v-app>
       <div>
+        <li v-for="header in headers" :key="header.text">
+          {{ header.value }}
+        </li>
         <v-data-table :headers="headers" :items="desserts">
-          <v-for header in headers :key="header.text">
-            <template v-slot:header.text="propsAPI">
-              <v-edit-dialog
-                :return-value.sync="propsAPI.item.name"
-                @save="save"
-                @cancel="cancel"
-                @open="open"
-                @close="close"
-              >
-                {{ propsAPI.item.name }}
-                <template v-slot:input>
-                  <v-text-field
-                    v-model="propsAPI.item.name"
-                    :rules="[max25chars]"
-                    label="Edit"
-                    single-line
-                    counter
-                  ></v-text-field>
-                </template>
-              </v-edit-dialog>
-            </template>
-          </v-for>
+          <template v-for="header in headers" v-slot:[`item.${header.value}`]="propsAPI">
+            <v-edit-dialog
+              :return-value.sync="propsAPI.value"
+              @save="save"
+              @cancel="cancel"
+              @open="open"
+              @close="close"
+              :key="header.value"
+            >
+              {{ propsAPI }}
+              <template v-slot:input>
+                <v-text-field
+                  v-model="propsAPI.value"
+                  :rules="[max25chars]"
+                  label="Edit"
+                  single-line
+                  counter
+                />
+              </template>
+            </v-edit-dialog>
+          </template>
 
-          <template v-slot:item.name="propsAPI">
-            <v-edit-dialog
-              :return-value.sync="propsAPI.item.name"
-              @save="save"
-              @cancel="cancel"
-              @open="open"
-              @close="close"
-            >
-              {{ propsAPI.item.name }}
-              <template v-slot:input>
-                <v-text-field
-                  v-model="propsAPI.item.name"
-                  :rules="[max25chars]"
-                  label="Edit"
-                  single-line
-                  counter
-                ></v-text-field>
-              </template>
-            </v-edit-dialog>
-          </template>
-          <template v-slot:item.iron="propsAPI">
-            <v-edit-dialog
-              :return-value.sync="propsAPI.item.iron"
-              large
-              persistent
-              @save="save"
-              @cancel="cancel"
-              @open="open"
-              @close="close"
-            >
-              <div>{{ propsAPI.item.iron }}</div>
-              <template v-slot:input>
-                <div class="mt-4 text-h6">Update Iron</div>
-                <v-text-field
-                  v-model="propsAPI.item.iron"
-                  :rules="[max25chars]"
-                  label="Edit"
-                  single-line
-                  counter
-                  autofocus
-                ></v-text-field>
-              </template>
-            </v-edit-dialog>
-          </template>
         </v-data-table>
 
         <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">

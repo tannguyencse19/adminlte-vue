@@ -1,18 +1,15 @@
 # e-project
 
-## Cập nhật UI 0.1.3
+## Cập nhật UI 0.1.4
 
 1. Đã làm
 
-- Gộp 3 button vào thành dropdown
-- Thêm search field
+- Tích vào thì hiện ra chỗ sửa luôn
+  - Tìm hiểu cách để customize render row v-data-table dùng slot API có sẵn (test.vue)
 
 2. Chưa làm:
 
 - Summernote (cái soạn tin nhắn) -> Tiptap vuetify
-- User/Admin List
-  - Tích vào thì hiện ra chỗ sửa luôn
-    - Tìm hiểu cách để customize render row v-data-table dùng slot API có sẵn (test.vue)
 
 3. Bug
 
