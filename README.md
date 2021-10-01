@@ -1,21 +1,18 @@
 # e-project
 
-## Cập nhật UI 0.1.4
+## Cập nhật UI 0.1.5
 
 1. Đã làm
 
-- Tích vào thì hiện ra chỗ sửa luôn
-  - Tìm hiểu cách để customize render row v-data-table dùng slot API có sẵn (test.vue)
+- Dashboard thay AdminLTE = Vuetify
 
 2. Chưa làm:
 
-- Summernote (cái soạn tin nhắn) -> Tiptap vuetify
+- Styling
 
 3. Bug
 
-- Tại sao add item lại lưu form được
-  - Chưa hiểu watcher viết gì
-  - this.nextTick?
+- Đôi lúc mất dữ liệu khi toggle show/hide
 
 ## De serve project:
 

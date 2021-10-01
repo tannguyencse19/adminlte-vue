@@ -18,7 +18,7 @@ import UserList from "@/json/UserList.json";
 import AdminList from "@/json/AdminList.json";
 import UserProfile from "@/views/User/Profile.vue";
 import List from "@/views/User/List.vue";
-import ListTest from "@/views/User/Test.vue";
+import TableTest from "@/views/Dashboard/Table.vue";
 
 Vue.use(VueRouter);
 
@@ -113,9 +113,9 @@ const routes = [
     component: Register,
   },
   {
-    path: "/list-test",
-    name: "list-test",
-    component: ListTest,
+    path: "/table-test",
+    name: "table-test",
+    component: TableTest,
   },
 ];
 
