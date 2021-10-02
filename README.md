@@ -8,8 +8,15 @@
 
 2. Chưa làm:
 
-- Styling
-
+- Dashboard
+  - Refactoring
+    - Stat box:
+      - Slot: Tên box
+      - Từ slot => Hiện màu nào
+    - Table:
+      - Slot: Data cần hiển thị
+  - Stying:
+    - v-expand-transition spacing
 3. Bug
 
 - Đôi lúc mất dữ liệu khi toggle show/hide

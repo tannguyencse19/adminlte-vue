@@ -1,24 +1,23 @@
 <template>
   <v-card class="mb-5">
     <v-card-title class="justify-space-between pb-0">
-      abc
+      <slot name="tableTitle"></slot>
       <v-btn icon @click="toggleBtn = !toggleBtn"><v-icon>mdi-eye</v-icon></v-btn>
     </v-card-title>
-
     <v-expand-transition>
       <v-card-text v-show="toggleBtn" class="pb-0">
         <v-simple-table fixed-header height="300px">
           <template v-slot:default>
-            <thead>
+            <!-- <thead>
               <tr>
                 <th class="text-left">Name</th>
-                <th class="text-left">Calories</th>
+                <th class="text-left">Due date</th>
               </tr>
-            </thead>
+            </thead> -->
             <tbody>
-              <tr v-for="item in desserts" :key="item.name">
-                <td>{{ item.name }}</td>
-                <td>{{ item.calories }}</td>
+              <tr v-for="item in tasks" :key="item.name">
+                <td class="font-weight-medium" style="width: 70%">{{ item.name }}</td>
+                <td class="text-orange">{{ item.due }}</td>
               </tr>
             </tbody>
           </template>
@@ -33,46 +32,38 @@ export default {
   data() {
     return {
       toggleBtn: true,
-      desserts: [
+      tasks: [
         {
-          name: "Frozen Yogurt",
-          calories: 159,
+          name: "Multiple users can be owners of the same task.",
+          due: "08-18-2021",
         },
         {
-          name: "Ice cream sandwich",
-          calories: 237,
+          name: "The Start & End (Due) dates can be provided",
+          due: "08-19-2021",
         },
         {
-          name: "Eclair",
-          calories: 262,
+          name: "Multiple users can be owners of the same task.",
+          due: "08-18-2021",
         },
         {
-          name: "Cupcake",
-          calories: 305,
+          name: "The Start & End (Due) dates can be provided",
+          due: "08-19-2021",
         },
         {
-          name: "Gingerbread",
-          calories: 356,
+          name: "Multiple users can be owners of the same task.",
+          due: "08-18-2021",
         },
         {
-          name: "Jelly bean",
-          calories: 375,
+          name: "The Start & End (Due) dates can be provided",
+          due: "08-19-2021",
         },
         {
-          name: "Lollipop",
-          calories: 392,
+          name: "Multiple users can be owners of the same task.",
+          due: "08-18-2021",
         },
         {
-          name: "Honeycomb",
-          calories: 408,
-        },
-        {
-          name: "Donut",
-          calories: 452,
-        },
-        {
-          name: "KitKat",
-          calories: 518,
+          name: "The Start & End (Due) dates can be provided",
+          due: "08-19-2021",
         },
       ],
     };
