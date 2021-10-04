@@ -1,6 +1,6 @@
 <template>
-  <v-card class="mb-5">
-    <v-card-title class="justify-space-between pb-0">
+  <v-card class="mb-5" elevation="4">
+    <v-card-title class="justify-space-between pb-0 text-body-1 font-weight-bold">
       <slot name="tableTitle"></slot>
       <v-btn icon @click="toggleBtn = !toggleBtn"><v-icon>mdi-eye</v-icon></v-btn>
     </v-card-title>
@@ -16,7 +16,7 @@
             </thead> -->
             <tbody>
               <tr v-for="item in tasks" :key="item.name">
-                <td class="font-weight-medium" style="width: 70%">{{ item.name }}</td>
+                <td class="font-weight-medium text-caption" style="width: 70%">{{ item.name }}</td>
                 <td class="text-orange">{{ item.due }}</td>
               </tr>
             </tbody>

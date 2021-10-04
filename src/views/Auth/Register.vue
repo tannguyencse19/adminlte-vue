@@ -1,5 +1,5 @@
 <template>
-  <body class="hold-transition register-page">
+  <body class="hold-transition register-page" style="background-color: #2d3a4b;">
     <div class="register-box">
       <div class="card card-outline card-primary">
         <div class="card-header text-center">

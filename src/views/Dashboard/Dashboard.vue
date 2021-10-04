@@ -30,12 +30,13 @@
       <!-- Main content -->
       <v-app>
         <v-main>
-          <v-container>
+          <!-- container chua co fluid -->
+          <v-container class="pl-5 pr-5">
             <!-- Stat box -->
             <v-row>
               <v-col sm="6" cols="12">
-                <router-link to="/project" class="info-box p-0">
-                  <span class="info-box-icon bg-info flex-column">
+                <router-link to="/project" class="info-box p-0 elevation-4">
+                  <span class="info-box-icon bg-primary flex-column">
                     <i class="far fa-envelope"></i>
                     <b class="text-sm">My Tasks</b>
                   </span>
@@ -54,7 +55,7 @@
                 <!-- /.info-box -->
               </v-col>
               <v-col sm="6" cols="12">
-                <router-link to="/calendar" class="info-box p-0">
+                <router-link to="/calendar" class="info-box p-0 elevation-4">
                   <span class="info-box-icon bg-success flex-column">
                     <i class="far fa-envelope"></i>
                     <b class="text-sm">My Events</b>

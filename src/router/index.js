@@ -18,7 +18,7 @@ import UserList from "@/json/UserList.json";
 import AdminList from "@/json/AdminList.json";
 import UserProfile from "@/views/User/Profile.vue";
 import List from "@/views/User/List.vue";
-import TableTest from "@/views/Dashboard/Table.vue";
+import SidebarTest from "@/components/SidebarTest.vue";
 
 Vue.use(VueRouter);
 
@@ -113,9 +113,9 @@ const routes = [
     component: Register,
   },
   {
-    path: "/table-test",
-    name: "table-test",
-    component: TableTest,
+    path: "/sidebar-test",
+    name: "sidebar-test",
+    component: SidebarTest,
   },
 ];
 

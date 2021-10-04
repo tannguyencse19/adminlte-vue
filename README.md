@@ -1,13 +1,24 @@
 # e-project
 
-## Cập nhật UI 0.1.5
+## Cập nhật UI 0.1.6
 
 1. Đã làm
 
-- Dashboard thay AdminLTE = Vuetify
+- Đẩy style:
+  - Sidebar
+  - Auth background
+  - Dashboard table, box
+    - Elevation
+    - padding left, right
 
 2. Chưa làm:
 
+- Đẩy màu
+  - User list
+  - Dashboard table, box
+    - mdi-eye
+
+- Sidebar collapse
 - Dashboard
   - Refactoring
     - Stat box:
@@ -17,9 +28,12 @@
       - Slot: Data cần hiển thị
   - Stying:
     - v-expand-transition spacing
+- v-app cho toàn bộ component (khi bỏ AdminLTE xong)
+
 3. Bug
 
-- Đôi lúc mất dữ liệu khi toggle show/hide
+- Dashboard: Đôi lúc mất dữ liệu khi toggle show/hide
+- User list: Bị trùng key
 
 ## De serve project:
 

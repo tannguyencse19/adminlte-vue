@@ -1,6 +1,6 @@
 <template>
   <!-- Left Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <aside class="main-sidebar sidebar-dark-info elevation-4 sidebar-test-bg">
     <!-- Brand Logo -->
     <router-link to="/" class="brand-link">
       <img
@@ -131,4 +131,11 @@ export default {
 </script>
 
 <style scoped>
+.sidebar-test-bg {
+  background-color: rgb(48, 65, 86);
+}
+
+.active {
+  
+}
 </style>
