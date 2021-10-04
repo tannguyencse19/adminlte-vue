@@ -70,14 +70,41 @@
               </v-btn>
             </template>
 
+            <template v-for="header in headers" v-slot:[`item.${header.value}`]="propsAPI">
+              <v-edit-dialog
+                :return-value.sync="propsAPI.value"
+                @save="save"
+                @cancel="cancel"
+                @open="open"
+                @close="close"
+                :key="header.value"
+              >
+                {{ propsAPI.value }}
+                <template v-slot:input>
+                  <v-text-field
+                    v-model="propsAPI.value"
+                    :rules="[max25chars]"
+                    label="Edit"
+                    single-line
+                    counter
+                  />
+                </template>
+              </v-edit-dialog>
+            </template>
+
+            <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">
+              {{ snackText }}
+
+              <template v-slot:action="{ attrs }">
+                <v-btn v-bind="attrs" text @click="snack = false">Close</v-btn>
+              </template>
+            </v-snackbar>
+
             <template v-slot:no-data>
               <v-btn color="primary" @click="fetchData">Reset</v-btn>
             </template>
-
-            <template v-slot:item.role="{ item }">
-              <span class="blue--text">{{ item.role }}</span>
-            </template>
           </v-data-table>
+          <!-- ./v-data-table -->
 
           <v-dialog v-model="dialog" max-width="500px">
             <v-card>
