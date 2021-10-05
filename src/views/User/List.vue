@@ -32,6 +32,12 @@
             class="elevation-1"
             :search="search"
           >
+            <template v-for="header in headers" v-slot:[`header.${header.value}`]="propsAPI">
+              <span :key="header.value" class="black--text text-subtitle-2 font-weight-bold">
+                {{ propsAPI.header.text }}
+              </span>
+            </template>
+
             <template v-slot:top>
               <v-container>
                 <v-row justify="space-between">
@@ -62,21 +68,13 @@
               <div class="text-right"></div>
             </template>
 
-            <template v-slot:item.actions="{ item }">
-              <v-icon small class="mr-2" @click="editItem(item)">mdi-pencil</v-icon>
-              <v-icon small @click="deleteItem(item)">mdi-delete</v-icon>
-              <v-btn icon to="/profile" @click="viewItem(item)">
-                <v-icon small>mdi-eye</v-icon>
-              </v-btn>
-            </template>
-
             <template v-for="header in headers" v-slot:[`item.${header.value}`]="propsAPI">
               <v-edit-dialog
                 :return-value.sync="propsAPI.value"
-                @save="save"
-                @cancel="cancel"
-                @open="open"
-                @close="close"
+                @save="saveEditDialog"
+                @cancel="cancelEditDialog"
+                @open="openEditDialog"
+                @close="closeEditDialog"
                 :key="header.value"
               >
                 {{ propsAPI.value }}
@@ -90,6 +88,18 @@
                   />
                 </template>
               </v-edit-dialog>
+            </template>
+
+            <template v-slot:item.actions="{ item }">
+              <v-btn color="blue" class="pa-0" dark x-small>
+                <v-icon dark small @click="editItem(item)">mdi-pencil</v-icon>
+              </v-btn>
+              <v-btn color="red" dark class="pa-0" x-small>
+                <v-icon dark small @click="deleteItem(item)">mdi-delete</v-icon>
+              </v-btn>
+              <v-btn color="indigo" dark class="pa-0" x-small to="/profile" @click="viewItem(item)">
+                <v-icon dark small>mdi-eye</v-icon>
+              </v-btn>
             </template>
 
             <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">
@@ -200,6 +210,11 @@ export default {
       status: "",
     },
     search: "",
+    snack: false,
+    snackColor: "",
+    snackText: "",
+    max25chars: (v) => v.length <= 25 || "Input too long!",
+    pagination: {},
   }),
   computed: {
     formTitle() {
@@ -298,6 +313,26 @@ export default {
       //console.log(header);
       //console.log(results);
       this.fetchData(results);
+    },
+
+    // Snackbar edit dialog
+    saveEditDialog() {
+      this.snack = true;
+      this.snackColor = "success";
+      this.snackText = "Data saved";
+    },
+    cancelEditDialog() {
+      this.snack = true;
+      this.snackColor = "error";
+      this.snackText = "Canceled";
+    },
+    openEditDialog() {
+      this.snack = true;
+      this.snackColor = "info";
+      this.snackText = "Dialog opened";
+    },
+    closeEditDialog() {
+      console.log("Dialog closed");
     },
   },
 };

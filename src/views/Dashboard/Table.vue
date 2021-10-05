@@ -2,7 +2,7 @@
   <v-card class="mb-5" elevation="4">
     <v-card-title class="justify-space-between pb-0 text-body-1 font-weight-bold">
       <slot name="tableTitle"></slot>
-      <v-btn icon @click="toggleBtn = !toggleBtn"><v-icon>mdi-eye</v-icon></v-btn>
+      <v-btn icon @click="toggleBtn = !toggleBtn"><v-icon color="deep-purple accent-3">mdi-eye</v-icon></v-btn>
     </v-card-title>
     <v-expand-transition>
       <v-card-text v-show="toggleBtn" class="pb-0">

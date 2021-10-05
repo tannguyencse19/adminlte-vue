@@ -10,15 +10,26 @@
   - Dashboard table, box
     - Elevation
     - padding left, right
+  - User list
+    - Header black text bold
+    - Action big icon background
+
+- Fix bug
+  - User list
+    - Edit dialog method
 
 2. Chưa làm:
 
 - Đẩy màu
   - User list
+    - Chip active status
+    - Multiple choice Roles
+    - header bị lệch do có icon sort
   - Dashboard table, box
-    - mdi-eye
+    - mdi-eye hide/show là 2 button
 
 - Sidebar collapse
+
 - Dashboard
   - Refactoring
     - Stat box:
@@ -33,7 +44,6 @@
 3. Bug
 
 - Dashboard: Đôi lúc mất dữ liệu khi toggle show/hide
-- User list: Bị trùng key
 
 ## De serve project:
 
