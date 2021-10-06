@@ -90,15 +90,24 @@
               </v-edit-dialog>
             </template>
 
+            <template v-slot:item.status="{ item }">
+              <v-chip dark color="green" v-if="item.status === `active` ">
+                {{item.status}}
+              </v-chip>
+              <v-chip dark color="red" v-else-if="item.status === `offline` ">
+                {{item.status}}
+              </v-chip>
+            </template>
+
             <template v-slot:item.actions="{ item }">
-              <v-btn color="blue" class="pa-0" dark x-small>
+              <!-- <v-btn color="blue" class="pa-0 mr-2" dark x-small>
                 <v-icon dark small @click="editItem(item)">mdi-pencil</v-icon>
+              </v-btn> -->
+              <v-btn color="info" dark class="pa-0 mr-2" x-small to="/profile" @click="viewItem(item)">
+                <v-icon dark small>mdi-eye</v-icon>
               </v-btn>
               <v-btn color="red" dark class="pa-0" x-small>
                 <v-icon dark small @click="deleteItem(item)">mdi-delete</v-icon>
-              </v-btn>
-              <v-btn color="indigo" dark class="pa-0" x-small to="/profile" @click="viewItem(item)">
-                <v-icon dark small>mdi-eye</v-icon>
               </v-btn>
             </template>
 

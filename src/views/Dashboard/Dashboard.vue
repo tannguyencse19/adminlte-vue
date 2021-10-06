@@ -7,8 +7,8 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0">Welcome [user-name]</h1>
-              <p>Company: [email]</p>
+              <h1 class="m-0">Welcome Alexander Pierce</h1>
+              <p>Department: Human Resources</p>
             </div>
             <!-- /.col -->
             <div class="col-sm-6">
@@ -56,9 +56,9 @@
               </v-col>
               <v-col sm="6" cols="12">
                 <router-link to="/calendar" class="info-box p-0 elevation-4">
-                  <span class="info-box-icon bg-success flex-column">
-                    <i class="far fa-envelope"></i>
-                    <b class="text-sm">My Events</b>
+                  <span class="info-box-icon bg-fuchsia flex-column">
+                    <i class="far fa-envelope text-white"></i>
+                    <b class="text-sm text-white">My Events</b>
                   </span>
                   <!-- /.info-box-icon -->
                   <div class="info-box-content flex-row align-items-center">

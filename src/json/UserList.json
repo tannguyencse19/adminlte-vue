@@ -5,7 +5,7 @@
     "username": "sethhowell_dev",
     "email": "crystal.prosacco@example.org",
     "role": "moderator",
-    "status": "active"
+    "status": "offline"
   },
   {
     "code": "MV_123",
@@ -13,7 +13,7 @@
     "username": "corinekunde_uiux",
     "email": "kokuneva@example.org",
     "role": "collaborator",
-    "status": "active"
+    "status": "offline"
   },
   {
     "code": "MV_123",
@@ -37,7 +37,7 @@
     "username": "corinekunde_uiux",
     "email": "kokuneva@example.org",
     "role": "collaborator",
-    "status": "active"
+    "status": "offline"
   },
   {
     "name": "Ivy Mitchell",
@@ -51,7 +51,7 @@
     "username": "sethhowell_dev",
     "email": "crystal.prosacco@example.org",
     "role": "moderator",
-    "status": "active"
+    "status": "offline"
   },
   {
     "name": "Corine Kunde",

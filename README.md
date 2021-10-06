@@ -5,12 +5,15 @@
 1. Đã làm
 
 - Đẩy style:
+
   - Sidebar
   - Auth background
   - Dashboard table, box
     - Elevation
     - padding left, right
+    - mdi-eye hide/show là 2 button
   - User list
+    - Chip active status
     - Header black text bold
     - Action big icon background
 
@@ -21,12 +24,11 @@
 2. Chưa làm:
 
 - Đẩy màu
+
   - User list
-    - Chip active status
-    - Multiple choice Roles
+    - Multiple choice Roles và apply
     - header bị lệch do có icon sort
   - Dashboard table, box
-    - mdi-eye hide/show là 2 button
 
 - Sidebar collapse
 
