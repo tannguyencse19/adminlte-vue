@@ -71,17 +71,18 @@
             <!-- Generate edit dialog for each column. Read Notes below -->
             <template v-for="header in headers" v-slot:[`item.${header.value}`]="propsAPI">
               <v-edit-dialog
-                :return-value.sync="propsAPI.value"
+                :return-value.sync="propsAPI.item[header.value]"
                 @save="saveEditDialog"
                 @cancel="cancelEditDialog"
                 @open="openEditDialog"
                 @close="closeEditDialog"
                 :key="header.value"
+                large
               >
-                {{ propsAPI.value }}
+                {{ propsAPI.item[header.value] }}
                 <template v-slot:input>
                   <v-text-field
-                    v-model="propsAPI.value"
+                    v-model="propsAPI.item[header.value]"
                     :rules="[max25chars]"
                     label="Edit"
                     single-line

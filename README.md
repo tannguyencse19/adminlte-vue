@@ -21,14 +21,18 @@
 - Fix bug
   - User list
     - Edit dialog method
+    - Edit dialog save editted data
 
 2. Chưa làm:
 
 - User list
-  - Snackbar chưa có apply data
+
   - v-select lưu data bằng cách nào?
+  - v-select styling
+  - Edit dialog show data đang edit => Gây khó chịu
 
 - Đẩy màu
+
   - User list
     - Multiple choice Roles và apply
     - header bị lệch do có icon sort
@@ -37,13 +41,13 @@
 - Sidebar collapse
 
 - Dashboard
+
   - Refactoring
     - Stat box:
       - Slot: Tên box
       - Từ slot => Hiện màu nào
     - Table:
       - Slot: Data cần hiển thị
-
 
 - v-app cho toàn bộ component (khi bỏ AdminLTE xong)
 
