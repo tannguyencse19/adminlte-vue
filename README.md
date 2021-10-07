@@ -12,6 +12,7 @@
     - Elevation
     - padding left, right
     - mdi-eye hide/show là 2 button
+    - Table spacing success
   - User list
     - Chip active status
     - Header black text bold
@@ -39,8 +40,6 @@
       - Từ slot => Hiện màu nào
     - Table:
       - Slot: Data cần hiển thị
-  - Stying:
-    - v-expand-transition spacing
 - v-app cho toàn bộ component (khi bỏ AdminLTE xong)
 
 3. Bug
