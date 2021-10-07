@@ -128,6 +128,7 @@
                 hide-details
                 :items="['moderator', 'collaborator', 'employee']"
                 :label="item.role"
+                
               />
             </template>
 
