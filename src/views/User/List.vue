@@ -68,6 +68,7 @@
               <div class="text-right"></div>
             </template>
 
+            <!-- Generate edit dialog for each column. Read Notes below -->
             <template v-for="header in headers" v-slot:[`item.${header.value}`]="propsAPI">
               <v-edit-dialog
                 :return-value.sync="propsAPI.value"
@@ -90,12 +91,13 @@
               </v-edit-dialog>
             </template>
 
+            <!-- Notes: These templates below override the generated dialog -->
             <template v-slot:item.status="{ item }">
-              <v-chip dark color="green" v-if="item.status === `active` ">
-                {{item.status}}
+              <v-chip dark color="green" v-if="item.status === `active`">
+                {{ item.status }}
               </v-chip>
-              <v-chip dark color="red" v-else-if="item.status === `offline` ">
-                {{item.status}}
+              <v-chip dark color="red" v-else-if="item.status === `offline`">
+                {{ item.status }}
               </v-chip>
             </template>
 
@@ -103,7 +105,14 @@
               <!-- <v-btn color="blue" class="pa-0 mr-2" dark x-small>
                 <v-icon dark small @click="editItem(item)">mdi-pencil</v-icon>
               </v-btn> -->
-              <v-btn color="info" dark class="pa-0 mr-2" x-small to="/profile" @click="viewItem(item)">
+              <v-btn
+                color="info"
+                dark
+                class="pa-0 mr-2"
+                x-small
+                to="/profile"
+                @click="viewItem(item)"
+              >
                 <v-icon dark small>mdi-eye</v-icon>
               </v-btn>
               <v-btn color="red" dark class="pa-0" x-small>
@@ -111,19 +120,29 @@
               </v-btn>
             </template>
 
-            <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">
-              {{ snackText }}
-
-              <template v-slot:action="{ attrs }">
-                <v-btn v-bind="attrs" text @click="snack = false">Close</v-btn>
-              </template>
-            </v-snackbar>
+            <template v-slot:item.role="{ item }">
+              <v-select
+                dense
+                outlined
+                hide-details
+                :items="['moderator', 'collaborator', 'employee']"
+                :label="item.role"
+              />
+            </template>
 
             <template v-slot:no-data>
               <v-btn color="primary" @click="fetchData">Reset</v-btn>
             </template>
           </v-data-table>
           <!-- ./v-data-table -->
+
+          <v-snackbar v-model="snack" :timeout="3000" :color="snackColor">
+            {{ snackText }}
+
+            <template v-slot:action="{ attrs }">
+              <v-btn v-bind="attrs" text @click="snack = false">Close</v-btn>
+            </template>
+          </v-snackbar>
 
           <v-dialog v-model="dialog" max-width="500px">
             <v-card>
@@ -222,7 +241,7 @@ export default {
     snack: false,
     snackColor: "",
     snackText: "",
-    max25chars: (v) => v.length <= 25 || "Input too long!",
+    max25chars: (v) => v.length <= 100 || "Input too long!",
     pagination: {},
   }),
   computed: {

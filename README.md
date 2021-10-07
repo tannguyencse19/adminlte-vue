@@ -14,7 +14,7 @@
     - mdi-eye hide/show là 2 button
     - Table spacing success
   - User list
-    - Chip active status
+    - Chip active status.
     - Header black text bold
     - Action big icon background
 
@@ -24,8 +24,11 @@
 
 2. Chưa làm:
 
-- Đẩy màu
+- User list
+  - Snackbar chưa có apply data
+  - v-select lưu data bằng cách nào?
 
+- Đẩy màu
   - User list
     - Multiple choice Roles và apply
     - header bị lệch do có icon sort
@@ -40,6 +43,8 @@
       - Từ slot => Hiện màu nào
     - Table:
       - Slot: Data cần hiển thị
+
+
 - v-app cho toàn bộ component (khi bỏ AdminLTE xong)
 
 3. Bug
