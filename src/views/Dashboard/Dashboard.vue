@@ -36,54 +36,51 @@
             <v-row>
               <v-col sm="6" cols="12">
                 <!-- need hover -->
-                <!-- :class="hover ? `elevation-4` : `elevation-8`" -->
-                <v-hover v-slot="{ hoverAPI }">
-                  <router-link
-                    to="/project"
-                    class="small-box bg-primary elevation-4 box"
-                    :class="{ 'elevation-8': hoverAPI }"
-                  >
-                    <div class="inner pl-5">
-                      <v-row>
-                        <v-col md="4" cols="12">
-                          <h3>6</h3>
-                          <p>Open Tasks</p>
-                        </v-col>
-                        <v-col md="4" cols="12">
-                          <h3>0</h3>
-                          <p>Closed Tasks</p>
-                        </v-col>
-                      </v-row>
-                    </div>
-                    <div class="icon">
-                      <i class="fas fa-briefcase"></i>
-                    </div>
-                    <div class="small-box-footer">
-                      More info
-                      <i class="fas fa-arrow-circle-right"></i>
-                    </div>
-                  </router-link>
-                </v-hover>
+                <router-link to="/project" class="small-box bg-blue elevation-4 box">
+                  <div class="inner pl-5">
+                    <v-row>
+                      <v-col md="4" cols="12">
+                        <h3>6</h3>
+                        <p>Open Tasks</p>
+                      </v-col>
+                      <v-col md="4" cols="12">
+                        <h3>0</h3>
+                        <p>Closed Tasks</p>
+                      </v-col>
+                    </v-row>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <div class="small-box-footer">
+                    More info
+                    <i class="fas fa-arrow-circle-right"></i>
+                  </div>
+                </router-link>
               </v-col>
               <v-col sm="6" cols="12">
-                <router-link to="/calendar" class="info-box p-0 elevation-4">
-                  <span class="info-box-icon bg-fuchsia flex-column">
-                    <i class="far fa-envelope text-white"></i>
-                    <b class="text-sm text-white">My Events</b>
-                  </span>
-                  <!-- /.info-box-icon -->
-                  <div class="info-box-content flex-row align-items-center">
-                    <span class="info-box-text text-green text-bold">Open</span>
-                    <span class="info-box-number m-0 ml-1">6</span>
+                <!-- need hover -->
+                <router-link to="/calendar" class="small-box bg-yellow elevation-4 box">
+                  <div class="inner pl-5">
+                    <v-row>
+                      <v-col md="4" cols="12">
+                        <h3>6</h3>
+                        <p>Open Events</p>
+                      </v-col>
+                      <v-col md="4" cols="12">
+                        <h3>0</h3>
+                        <p>Closed Events</p>
+                      </v-col>
+                    </v-row>
                   </div>
-                  <!-- /.info-box-content -->
-                  <div class="info-box-content flex-row align-items-center">
-                    <span class="info-box-text text-red text-bold">Closed</span>
-                    <span class="info-box-number m-0 ml-1">0</span>
+                  <div class="icon">
+                    <i class="fas fa-calendar"></i>
                   </div>
-                  <!-- /.info-box-content -->
+                  <div class="small-box-footer">
+                    More info
+                    <i class="fas fa-arrow-circle-right"></i>
+                  </div>
                 </router-link>
-                <!-- /.info-box -->
               </v-col>
             </v-row>
             <!-- ./end stat box -->
