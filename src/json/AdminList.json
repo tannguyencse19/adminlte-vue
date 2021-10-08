@@ -13,7 +13,7 @@
     "username": "corinekunde_uiux",
     "email": "kokuneva@example.org",
     "role": "admin",
-    "status": "offline"
+    "status": "active"
   },
   {
     "code": "MV_123",
@@ -29,7 +29,7 @@
     "username": "sethhowell_dev",
     "email": "crystal.prosacco@example.org",
     "role": "admin",
-    "status": "active"
+    "status": "offline"
   },
   {
     "code": "MV_123",
@@ -44,14 +44,14 @@
     "username": "ivymitchell567",
     "email": "sebert@example.org",
     "role": "collaborator",
-    "status": "active"
+    "status": "offline"
   },
   {
     "name": "Seth Howell",
     "username": "sethhowell_dev",
     "email": "crystal.prosacco@example.org",
     "role": "moderator",
-    "status": "offline"
+    "status": "active"
   },
   {
     "name": "Corine Kunde",

@@ -44,7 +44,7 @@
                   <v-col cols="12" sm="4">
                     <v-menu offset-y>
                       <template v-slot:activator="{ on, attrs }">
-                        <v-btn color="primary" v-bind="attrs" v-on="on">Menu</v-btn>
+                        <v-btn color="indigo" class="white--text" v-bind="attrs" v-on="on">Menu</v-btn>
                       </template>
                       <v-list>
                         <v-btn text block small @click="handleDownload">Export</v-btn>
@@ -128,7 +128,7 @@
                 hide-details
                 :items="['moderator', 'collaborator', 'employee']"
                 :label="item.role"
-                
+                style="width: 150px"
               />
             </template>
 
@@ -213,7 +213,7 @@ export default {
   data: () => ({
     headers: [
       { text: "Code", value: "code" },
-      { text: "Employee Name", value: "name" },
+      { text: "Name", value: "name" },
       { text: "Username", value: "username" },
       { text: "Email", value: "email" },
       { text: "Role", value: "role" },

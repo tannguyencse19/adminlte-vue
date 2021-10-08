@@ -17,6 +17,7 @@
     - Chip active status.
     - Header black text bold
     - Action big icon background
+    - v-select
 
 - Fix bug
   - User list
@@ -27,16 +28,16 @@
 
 - User list
 
-  - v-select lưu data bằng cách nào?
-  - v-select styling
-  - Edit dialog show data đang edit => Gây khó chịu
+  - Styling
+    - Edit dialog show data đang edit => Gây khó chịu
+    - header bị lệch do có icon sort
+  - Functioning
+    - Edit xong chưa save vào DB
 
 - Đẩy màu
 
-  - User list
-    - Multiple choice Roles và apply
-    - header bị lệch do có icon sort
   - Dashboard table, box
+    - Box cần refactoring hover
 
 - Sidebar collapse
 

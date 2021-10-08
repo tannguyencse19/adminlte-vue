@@ -1,6 +1,6 @@
 <template>
   <v-card class="mb-5" elevation="4">
-    <v-card-title class="justify-space-between pb-0 text-body-1 font-weight-normal">
+    <v-card-title class="justify-space-between pb-0 text-body-1 font-weight-medium">
       <slot name="tableTitle"></slot>
       <v-btn icon @click="toggleBtn = !toggleBtn">
         <v-icon v-if="toggleBtn" color="blue darken-2">mdi-eye</v-icon>
