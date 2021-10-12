@@ -1,28 +1,11 @@
 # e-project
 
-## Cập nhật UI 0.1.6
+## Cập nhật UI 0.1.8
 
 1. Đã làm
 
-- Đẩy style:
-
+- Refactoring
   - Sidebar
-  - Auth background
-  - Dashboard table, box
-    - Elevation
-    - padding left, right
-    - mdi-eye hide/show là 2 button
-    - Table spacing success
-  - User list
-    - Chip active status.
-    - Header black text bold
-    - Action big icon background
-    - v-select
-
-- Fix bug
-  - User list
-    - Edit dialog method
-    - Edit dialog save editted data
 
 2. Chưa làm:
 
