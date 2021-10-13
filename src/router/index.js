@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "@/views/Home/Home.vue";
+import AfterLogin from "@/views/Home/AfterLogin.vue";
 import Login from "@/views/Auth/Login.vue";
 import ForgotPassword from "@/views/Auth/ForgotPassword.vue";
 import Register from "@/views/Auth/Register.vue";
@@ -18,15 +18,30 @@ import UserList from "@/json/UserList.json";
 import AdminList from "@/json/AdminList.json";
 import UserProfile from "@/views/User/Profile.vue";
 import List from "@/views/User/List.vue";
-import AppTest from '@/App2.vue'
+// import AppTest from '@/App2.vue'
 
 Vue.use(VueRouter);
 
 const routes = [
   {
+    path: "/login",
+    name: "login",
+    component: Login,
+  },
+  {
+    path: "/forgot-password",
+    name: "forgot-password",
+    component: ForgotPassword,
+  },
+  {
+    path: "/register",
+    name: "register",
+    component: Register,
+  },
+  {
     path: "",
     name: "AfterLogin",
-    component: Home,
+    component: AfterLogin,
     children: [
       {
         path: "/",
@@ -97,26 +112,11 @@ const routes = [
       },
     ],
   },
-  {
-    path: "/login",
-    name: "login",
-    component: Login,
-  },
-  {
-    path: "/forgot-password",
-    name: "forgot-password",
-    component: ForgotPassword,
-  },
-  {
-    path: "/register",
-    name: "register",
-    component: Register,
-  },
-  {
-    path: "/app-test",
-    name: "app-test",
-    component: AppTest,
-  },
+  // {
+  //   path: "/app-test",
+  //   name: "app-test",
+  //   component: AppTest,
+  // },
 ];
 
 const router = new VueRouter({
