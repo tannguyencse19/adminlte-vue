@@ -77,7 +77,8 @@
       <router-view />
     </v-main>
 
-    <v-footer>
+    <!-- Lam theo kieu company footer (xem docs) -->
+    <v-footer app inset absolute>
       <div>
         <b>Version</b>
         3.1.0
