@@ -5,9 +5,23 @@
 1. Đã làm
 
 - Sidebar
-  - 
+  - Áp background lên
+
+- Navbar
+  - Float right btn
+
+- Footer
+  - Áp màu
 
 2. Chưa làm:
+
+- Sidebar
+  - Fix lòi scroll
+
+- Thêm Overlay loading từ login vào dashboard?
+
+- Navbar
+  - Notification
 
 - User list
 

@@ -1,12 +1,14 @@
 <template>
-  <v-app-bar app dark absolute class="navbar-bg">
-    <v-app-bar-nav-icon @click="toggleSidebar"></v-app-bar-nav-icon>
+  <v-app-bar app dark absolute class="navbar-bg" >
+    <v-app-bar-nav-icon @click="toggleSidebar" />
 
     <v-toolbar-title>Homepage</v-toolbar-title>
 
+    <v-spacer />
+
     <v-menu>
       <template v-slot:activator="{ on, attrs }">
-        <v-btn icon v-bind="attrs" v-on="on">
+        <v-btn icon v-bind="attrs" v-on="on" right>
           <v-badge :content="messages" :value="messages" color="red" overlap>
             <v-icon>mdi-chat</v-icon>
           </v-badge>
@@ -23,7 +25,7 @@
     <v-menu>
       <template v-slot:activator="{ on, attrs }">
         <v-btn icon v-bind="attrs" v-on="on">
-          <v-badge :content="messages" :value="messages" color="yellow" overlap>
+          <v-badge :content="messages" :value="messages" color="green" overlap light>
             <v-icon>mdi-bell</v-icon>
           </v-badge>
         </v-btn>
