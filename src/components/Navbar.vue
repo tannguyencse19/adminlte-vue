@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar app dark class="navbar-bg" absolute>
+  <v-app-bar app dark absolute class="navbar-bg">
     <v-app-bar-nav-icon @click="toggleSidebar"></v-app-bar-nav-icon>
 
     <v-toolbar-title>Homepage</v-toolbar-title>

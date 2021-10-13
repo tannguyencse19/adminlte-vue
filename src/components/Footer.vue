@@ -11,14 +11,20 @@
     </strong>
     All rights reserved.
   </v-footer> -->
-  <v-footer color="primary lighten-1" padless app inset absolute>
+  <v-footer class="navbar-bg" padless app inset absolute>
     <v-row justify="center" no-gutters>
-      <v-btn v-for="link in links" :key="link" color="white" text rounded class="my-2">
+      <!-- <v-btn v-for="link in links" :key="link" color="white" text rounded class="my-2">
         {{ link }}
-      </v-btn>
-      <v-col class="primary lighten-2 py-4 text-center white--text" cols="12">
-        {{ new Date().getFullYear() }} —
-        <strong>Vuetify</strong>
+      </v-btn> -->
+      <v-col class="py-4 text-center white--text" cols="12">
+        <div>
+          <b>Version</b>
+          3.1.0
+        </div>
+        <strong>
+          Copyright &copy; 2014-2021
+          <a href="https://github.com/tannguyencse19" style="color: orange;">Tan Nguyen</a>
+        </strong>
       </v-col>
     </v-row>
   </v-footer>
@@ -33,5 +39,8 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.navbar-bg {
+  background: linear-gradient(93.34deg, #3b23c1 2.76%, #6714a4 52.76%);
+}
 </style>

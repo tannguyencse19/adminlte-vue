@@ -1,23 +1,19 @@
 <template>
   <v-navigation-drawer v-model="drawerProp" app class="sidebar-bg">
     <router-link to="/">
-      <v-card flat class="p-3 pb-0">
-        <v-img src="@/img/logo.png" />
-      </v-card>
+      <v-img src="@/img/logo-dark.png" class="m-3" />
     </router-link>
 
-    <v-divider />
+    <v-divider style="border-color: rgba(255, 255, 255, 0.22) !important;" />
 
-    <router-link to="/profile">
-      <v-card flat class="pl-3 pr-3">
-        <v-avatar size="36">
-          <img src="@/plugins/dist/img/user2-160x160.jpg" alt="user-avatar" />
-        </v-avatar>
-        Alexander Pierce
-      </v-card>
+    <router-link to="/profile" class="p-3">
+      <v-avatar size="36">
+        <img src="@/plugins/dist/img/user2-160x160.jpg" alt="user-avatar" />
+      </v-avatar>
+      <span style="color: white;" class="ml-3">Alexander Pierce</span>
     </router-link>
 
-    <v-divider />
+    <v-divider style="border-color: rgba(255, 255, 255, 0.22) !important;" />
 
     <v-list dense nav>
       <v-list-item v-for="item in items" :key="item.title" exact link :to="item.link" dark>
@@ -55,6 +51,6 @@ export default {
   background-color: rgb(48, 65, 86) !important;
 }
 .v-list .v-list-item--active {
-  color: rgb(120, 120, 255) !important;
+  color: rgb(146, 146, 251) !important;
 }
 </style>

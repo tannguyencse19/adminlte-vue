@@ -4,10 +4,8 @@
 
 1. Đã làm
 
-- Refactoring AdminLTE thành Vuetify
-  - Sidebar
-  - Navbar
-  - Footer
+- Sidebar
+  - 
 
 2. Chưa làm:
 
