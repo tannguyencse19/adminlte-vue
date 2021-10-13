@@ -1,141 +1,60 @@
 <template>
-  <!-- Left Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-info elevation-4 sidebar-test-bg">
-    <!-- Brand Logo -->
-    <router-link to="/" class="brand-link">
-      <img
-        src="@/plugins/dist/img/AdminLTELogo.png"
-        alt="AdminLTE Logo"
-        class="brand-image img-circle elevation-3"
-        style="opacity: 0.8"
-      />
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+  <v-navigation-drawer v-model="drawerProp" app class="sidebar-bg">
+    <router-link to="/">
+      <v-card flat class="p-3 pb-0">
+        <v-img src="@/img/logo.png" />
+      </v-card>
     </router-link>
 
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img
-            src="@/plugins/dist/img/user2-160x160.jpg"
-            class="img-circle elevation-2"
-            alt="User Image"
-          />
-        </div>
-        <div class="info">
-          <router-link to="/profile" class="d-block" active-class="active">Alexander Pierce</router-link>
-        </div>
-      </div>
+    <v-divider />
 
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul
-          class="nav nav-pills nav-sidebar nav-child-indent flex-column"
-          data-widget="treeview"
-          role="menu"
-          data-accordion="false"
-        >
-          <!-- Dashboard -->
-          <li class="nav-item">
-            <router-link to="/" class="nav-link" exact-active-class="active">
-              <i class="nav-icon fas fa-home"></i>
-              <p>Dashboard</p>
-            </router-link>
-          </li>
-          <!-- Feed -->
-          <!-- <li class="nav-item">
-              <a href="#feed" class="nav-link">
-                <i class="nav-icon far fa-newspaper"></i>
-                <p>Feed</p>
-              </a>
-            </li> -->
-          <!-- Discuss -->
-          <li class="nav-item">
-            <router-link to="/inbox" class="nav-link" active-class="active">
-              <i class="nav-icon far fa-comment-dots"></i>
-              <p>Inbox</p>
-            </router-link>
-          </li>
-          <!-- Calendar -->
-          <li class="nav-item">
-            <router-link to="/calendar" class="nav-link" active-class="active">
-              <i class="nav-icon far fa-calendar-alt"></i>
-              <p>Calendar</p>
-            </router-link>
-          </li>
-          <!-- Projects -->
-          <li class="nav-item">
-            <router-link to="/project" class="nav-link" active-class="active">
-              <i class="nav-icon fas fa-suitcase"></i>
-              <p>Project Summary</p>
-            </router-link>
-          </li>
-          <!-- User List -->
-          <li class="nav-item">
-            <router-link to="/user-list" class="nav-link" active-class="active">
-              <i class="nav-icon fas fa-user"></i>
-              <p>User List</p>
-            </router-link>
-          </li>
-          <!-- Admin List -->
-          <li class="nav-item">
-            <router-link to="/admin-list" class="nav-link" active-class="active">
-              <i class="nav-icon fas fa-user-lock"></i>
-              <p>Admin List</p>
-            </router-link>
-          </li>
-          <!-- WORK OVERVIEW treeview -->
-          <!-- <li class="nav-item menu-open">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-chevron-circle-up"></i>
-                <p>WORK OVERVIEW</p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="#tasks" class="nav-link">
-                    <p>Tasks</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#issues" class="nav-link">
-                    <p>Issues</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#milestones" class="nav-link">
-                    <p>Milestones</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="#timesheets" class="nav-link">
-                    <p>Timesheets</p>
-                  </a>
-                </li>
-              </ul>
-            </li> -->
-        </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
-    </div>
-    <!-- /.sidebar -->
-  </aside>
-  <!-- /.left-sidebar-container -->
+    <router-link to="/profile">
+      <v-card flat class="pl-3 pr-3">
+        <v-avatar size="36">
+          <img src="@/plugins/dist/img/user2-160x160.jpg" alt="user-avatar" />
+        </v-avatar>
+        Alexander Pierce
+      </v-card>
+    </router-link>
+
+    <v-divider />
+
+    <v-list dense nav>
+      <v-list-item v-for="item in items" :key="item.title" exact link :to="item.link" dark>
+        <v-list-item-icon>
+          <v-icon>{{ item.icon }}</v-icon>
+        </v-list-item-icon>
+
+        <v-list-item-content>
+          <v-list-item-title>{{ item.title }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
+  </v-navigation-drawer>
 </template>
 
 <script>
 export default {
   name: "Sidebar",
-  data: () => ({}),
+  props: ["drawerProp"],
+  data: () => ({
+    items: [
+      { title: "Dashboard", icon: "mdi-home", link: "/" },
+      { title: "Inbox", icon: "mdi-message", link: "/inbox" },
+      { title: "Calendar", icon: "mdi-calendar", link: "/calendar" },
+      { title: "Project", icon: "mdi-briefcase", link: "/project" },
+      { title: "User List", icon: "mdi-account", link: "/user-list" },
+      { title: "Admin List", icon: "mdi-account-lock", link: "/admin-list" },
+    ],
+  }),
 };
 </script>
 
 <style scoped>
-.sidebar-test-bg {
-  background-color: rgb(48, 65, 86);
+.sidebar-bg {
+  background-color: rgb(48, 65, 86) !important;
 }
-
-.active {
-  
+.v-list .v-list-item--active {
+  color: rgb(120, 120, 255) !important;
 }
 </style>
