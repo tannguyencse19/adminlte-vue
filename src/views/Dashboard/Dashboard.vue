@@ -29,52 +29,84 @@
     <v-container class="pl-5 pr-5" fluid>
       <!-- Stat box -->
       <v-row>
-        <v-col sm="6" cols="12">
+        <v-col sm="3" cols="12">
           <!-- need hover -->
           <router-link to="/project" class="small-box bg-blue elevation-4 box">
-            <div class="inner pl-5">
-              <v-row>
-                <v-col md="4" cols="12">
-                  <h3>6</h3>
-                  <p>Open Tasks</p>
-                </v-col>
-                <v-col md="4" cols="12">
-                  <h3>0</h3>
-                  <p>Closed Tasks</p>
-                </v-col>
-              </v-row>
-            </div>
-            <div class="icon">
-              <i class="fas fa-briefcase"></i>
-            </div>
-            <div class="small-box-footer">
+            <v-row>
+              <v-col md="6" cols="6" class="pl-5">
+                <h3>6</h3>
+                <p>Tasks</p>
+              </v-col>
+              <v-col md="6" cols="6">
+                <div class="icon">
+                  <i class="fas fa-briefcase"></i>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="small-box-footer">
               More info
               <i class="fas fa-arrow-circle-right"></i>
-            </div>
+            </v-row>
           </router-link>
         </v-col>
-        <v-col sm="6" cols="12">
+        <v-col sm="3" cols="12">
           <!-- need hover -->
-          <router-link to="/calendar" class="small-box bg-yellow elevation-4 box">
-            <div class="inner pl-5">
-              <v-row>
-                <v-col md="4" cols="12">
-                  <h3>6</h3>
-                  <p>Open Events</p>
-                </v-col>
-                <v-col md="4" cols="12">
-                  <h3>0</h3>
-                  <p>Closed Events</p>
-                </v-col>
-              </v-row>
-            </div>
-            <div class="icon">
-              <i class="fas fa-calendar"></i>
-            </div>
-            <div class="small-box-footer">
+          <router-link to="/project" class="small-box bg-green elevation-4 box">
+            <v-row>
+              <v-col md="6" cols="6" class="pl-5">
+                <h3>6</h3>
+                <p>Inbox</p>
+              </v-col>
+              <v-col md="6" cols="6">
+                <div class="icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="small-box-footer">
               More info
               <i class="fas fa-arrow-circle-right"></i>
-            </div>
+            </v-row>
+          </router-link>
+        </v-col>
+        <v-col sm="3" cols="12">
+          <!-- need hover -->
+          <router-link to="/project" class="small-box bg-yellow elevation-4 box">
+            <v-row>
+              <v-col md="6" cols="6" class="pl-5">
+                <h3>6</h3>
+                <p>Events</p>
+              </v-col>
+              <v-col md="6" cols="6">
+                <div class="icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="small-box-footer">
+              More info
+              <i class="fas fa-arrow-circle-right"></i>
+            </v-row>
+          </router-link>
+        </v-col>
+        <v-col sm="3" cols="12">
+          <!-- need hover -->
+          <router-link to="/project" class="small-box bg-red elevation-4 box">
+            <v-row>
+              <v-col md="6" cols="6" class="pl-5">
+                <h3>6</h3>
+                <p>Issues</p>
+              </v-col>
+              <v-col md="6" cols="6">
+                <div class="icon">
+                  <i class="fas fa-calendar-alt"></i>
+                </div>
+              </v-col>
+            </v-row>
+            <v-row class="small-box-footer">
+              More info
+              <i class="fas fa-arrow-circle-right"></i>
+            </v-row>
           </router-link>
         </v-col>
       </v-row>

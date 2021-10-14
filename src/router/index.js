@@ -19,6 +19,7 @@ import AdminList from "@/json/AdminList.json";
 import UserProfile from "@/views/User/Profile.vue";
 import List from "@/views/User/List.vue";
 // import AppTest from '@/App2.vue'
+import Box from "@/views/Dashboard/Box-sm-3.vue"
 
 Vue.use(VueRouter);
 
@@ -112,11 +113,11 @@ const routes = [
       },
     ],
   },
-  // {
-  //   path: "/app-test",
-  //   name: "app-test",
-  //   component: AppTest,
-  // },
+  {
+    path: "/box",
+    name: "box",
+    component: Box,
+  },
 ];
 
 const router = new VueRouter({

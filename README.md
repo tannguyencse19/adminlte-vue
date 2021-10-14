@@ -1,57 +1,43 @@
 # e-project
 
-## Cập nhật UI 0.1.8
+## Cập nhật UI 0.1.9
 
 1. Đã làm
 
-- Sidebar
-  - Áp background lên
-
-- Navbar
-  - Float right btn
-
-- Footer
-  - Áp màu
+- Dashboard
+  - thêm statbox
+  - refactoring statbox
 
 2. Chưa làm:
 
 - Sidebar
+
   - Fix lòi scroll
 
 - Thêm Overlay loading từ login vào dashboard?
 
 - Navbar
+
   - Notification
+
+- Fix layout các views
 
 - User list
 
   - Styling
     - Edit dialog show data đang edit => Gây khó chịu
     - header bị lệch do có icon sort
-  - Functioning
-    - Edit xong chưa save vào DB
-
-- Đẩy màu
-
-  - Dashboard table, box
-    - Box cần refactoring hover
-
-- Sidebar collapse
 
 - Dashboard
-
   - Refactoring
     - Stat box:
       - Slot: Tên box
       - Từ slot => Hiện màu nào
+      - Refactoring hover
     - Table:
       - Slot: Data cần hiển thị
 
-- v-app cho toàn bộ component (khi bỏ AdminLTE xong)
-
 3. Bug
-
-- Dashboard: Đôi lúc mất dữ liệu khi toggle show/hide
 
 ## De serve project:
 
