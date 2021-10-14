@@ -8,17 +8,19 @@
   - thêm statbox
   - refactoring statbox
 
+- Thêm Overlay loading từ login vào dashboard
+
+- Không thêm skeletor vì boilerplate code
+
 2. Chưa làm:
 
 - Sidebar
 
   - Fix lòi scroll
 
-- Thêm Overlay loading từ login vào dashboard?
-
 - Navbar
 
-  - Notification
+  - Notification + Message v-menu
 
 - Fix layout các views
 

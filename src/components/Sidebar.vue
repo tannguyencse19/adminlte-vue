@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer v-model="drawerProp" app class="sidebar-bg">
-    <router-link to="/">
+    <router-link to="/dashboard">
       <v-img src="@/img/logo-dark.png" class="m-3" />
     </router-link>
 
@@ -35,7 +35,7 @@ export default {
   props: ["drawerProp"],
   data: () => ({
     items: [
-      { title: "Dashboard", icon: "mdi-home", link: "/" },
+      { title: "Dashboard", icon: "mdi-home", link: "/dashboard" },
       { title: "Inbox", icon: "mdi-message", link: "/inbox" },
       { title: "Calendar", icon: "mdi-calendar", link: "/calendar" },
       { title: "Project", icon: "mdi-briefcase", link: "/project" },

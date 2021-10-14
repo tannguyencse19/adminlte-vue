@@ -38,7 +38,7 @@
       </v-list>
     </v-menu>
 
-    <v-btn to="/login" text>Login</v-btn>
+    <v-btn to="/" text>Logout</v-btn>
   </v-app-bar>
 </template>
 
