@@ -30,84 +30,16 @@
       <!-- Stat box -->
       <v-row>
         <v-col sm="3" cols="12">
-          <!-- need hover -->
-          <router-link to="/project" class="small-box bg-blue elevation-4 box">
-            <v-row>
-              <v-col md="6" cols="6" class="pl-5">
-                <h3>6</h3>
-                <p>Tasks</p>
-              </v-col>
-              <v-col md="6" cols="6">
-                <div class="icon">
-                  <i class="fas fa-briefcase"></i>
-                </div>
-              </v-col>
-            </v-row>
-            <v-row class="small-box-footer">
-              More info
-              <i class="fas fa-arrow-circle-right"></i>
-            </v-row>
-          </router-link>
+          <Box :name="`Tasks`" :color="`blue`" :icon="`mdi-briefcase-variant`" />
         </v-col>
         <v-col sm="3" cols="12">
-          <!-- need hover -->
-          <router-link to="/project" class="small-box bg-green elevation-4 box">
-            <v-row>
-              <v-col md="6" cols="6" class="pl-5">
-                <h3>6</h3>
-                <p>Inbox</p>
-              </v-col>
-              <v-col md="6" cols="6">
-                <div class="icon">
-                  <i class="fas fa-calendar-alt"></i>
-                </div>
-              </v-col>
-            </v-row>
-            <v-row class="small-box-footer">
-              More info
-              <i class="fas fa-arrow-circle-right"></i>
-            </v-row>
-          </router-link>
+          <Box :name="`Inbox`" :color="`green`" :icon="`mdi-message`" />
         </v-col>
         <v-col sm="3" cols="12">
-          <!-- need hover -->
-          <router-link to="/project" class="small-box bg-yellow elevation-4 box">
-            <v-row>
-              <v-col md="6" cols="6" class="pl-5">
-                <h3>6</h3>
-                <p>Events</p>
-              </v-col>
-              <v-col md="6" cols="6">
-                <div class="icon">
-                  <i class="fas fa-calendar-alt"></i>
-                </div>
-              </v-col>
-            </v-row>
-            <v-row class="small-box-footer">
-              More info
-              <i class="fas fa-arrow-circle-right"></i>
-            </v-row>
-          </router-link>
+          <Box :name="`Event`" :color="`yellow`" :icon="`mdi-calendar`" />
         </v-col>
         <v-col sm="3" cols="12">
-          <!-- need hover -->
-          <router-link to="/project" class="small-box bg-red elevation-4 box">
-            <v-row>
-              <v-col md="6" cols="6" class="pl-5">
-                <h3>6</h3>
-                <p>Issues</p>
-              </v-col>
-              <v-col md="6" cols="6">
-                <div class="icon">
-                  <i class="fas fa-calendar-alt"></i>
-                </div>
-              </v-col>
-            </v-row>
-            <v-row class="small-box-footer">
-              More info
-              <i class="fas fa-arrow-circle-right"></i>
-            </v-row>
-          </router-link>
+          <Box :name="`Issues`" :color="`red`" :icon="`mdi-alert`" />
         </v-col>
       </v-row>
       <!-- ./end stat box -->
@@ -132,13 +64,12 @@
 
 <script>
 import Table from "./Table.vue";
-import Box from "./Box.vue";
+import Box from "./Box-sm-3.vue";
 
 export default {
   name: "Dashboard",
   components: {
     Table,
-    // eslint-disable-next-line vue/no-unused-components
     Box,
   },
 };

@@ -4,13 +4,18 @@
 
 1. Đã làm
 
-- Dashboard
-  - thêm statbox
-  - refactoring statbox
+- Vuetify statbox
+  - Làm sao để icon flex-end?
+  - Hover bị lag lag?
 
-- Thêm Overlay loading từ login vào dashboard
-
-- Không thêm skeletor vì boilerplate code
+- Refactoring
+  - Dashboard
+    - Stat box:
+      - Slot: Tên box
+      - Từ slot => Hiện màu nào
+      - Refactoring hover
+    - Table:
+      - Slot: Data cần hiển thị
 
 2. Chưa làm:
 
@@ -29,15 +34,6 @@
   - Styling
     - Edit dialog show data đang edit => Gây khó chịu
     - header bị lệch do có icon sort
-
-- Dashboard
-  - Refactoring
-    - Stat box:
-      - Slot: Tên box
-      - Từ slot => Hiện màu nào
-      - Refactoring hover
-    - Table:
-      - Slot: Data cần hiển thị
 
 3. Bug
 
