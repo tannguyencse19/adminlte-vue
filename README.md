@@ -20,6 +20,7 @@
   - Dashboard
     - Table: API
       - Data cần hiển thị
+  - Navbar notification: API
 
 - Vuetify statbox
 

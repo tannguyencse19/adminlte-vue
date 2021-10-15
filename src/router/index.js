@@ -18,8 +18,7 @@ import UserList from "@/json/UserList.json";
 import AdminList from "@/json/AdminList.json";
 import UserProfile from "@/views/User/Profile.vue";
 import List from "@/views/User/List.vue";
-// import AppTest from '@/App2.vue'
-import Box from "@/views/Dashboard/Box-sm-3.vue"
+import navbar from "@/components/Navbar.vue"
 
 Vue.use(VueRouter);
 
@@ -113,9 +112,9 @@ const routes = [
     ],
   },
   {
-    path: "/box",
-    name: "box",
-    component: Box,
+    path: "/navbar",
+    name: "navbar",
+    component: navbar,
   },
 ];
 
