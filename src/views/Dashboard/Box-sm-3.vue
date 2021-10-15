@@ -5,7 +5,7 @@
         <v-row justify="space-between">
           <v-col md="4" cols="6">
             <h3 class="text-h4 font-weight-bold white--text">6</h3>
-            <p class="white--text">{{name}}</p>
+            <p class="white--text">{{ name }}</p>
           </v-col>
           <v-spacer />
           <v-col md="4" cols="6">
@@ -14,13 +14,12 @@
               style="color: rgba(0, 0, 0, 0.15)"
               :class="{ 'icon-on-hover': hover }"
             >
-              {{icon}}
+              {{ icon }}
             </v-icon>
           </v-col>
         </v-row>
       </v-card-text>
-      <v-card-actions style="justify-content: center" class="
-      accent-4" :class="color">
+      <v-card-actions style="justify-content: center" class="accent-4" :class="color">
         More info
         <v-icon class="ml-1">mdi-arrow-right-bold-circle</v-icon>
       </v-card-actions>
