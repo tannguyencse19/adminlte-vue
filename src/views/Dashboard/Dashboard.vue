@@ -30,16 +30,16 @@
       <!-- Stat box -->
       <v-row>
         <v-col sm="3" cols="12">
-          <Box :name="`Tasks`" :color="`blue`" :icon="`mdi-briefcase-variant`" />
+          <Box :name="`Tasks`" :color="`blue`" :icon="`mdi-briefcase-variant`" :to="`/project`" />
         </v-col>
         <v-col sm="3" cols="12">
-          <Box :name="`Inbox`" :color="`green`" :icon="`mdi-message`" />
+          <Box :name="`Inbox`" :color="`green`" :icon="`mdi-message`" :to="`/inbox`" />
         </v-col>
         <v-col sm="3" cols="12">
-          <Box :name="`Event`" :color="`yellow`" :icon="`mdi-calendar`" />
+          <Box :name="`Event`" :color="`yellow`" :icon="`mdi-calendar`" :to="`/calendar`" />
         </v-col>
         <v-col sm="3" cols="12">
-          <Box :name="`Issues`" :color="`red`" :icon="`mdi-alert`" />
+          <Box :name="`Issues`" :color="`red`" :icon="`mdi-alert`" :to="`/project`" />
         </v-col>
       </v-row>
       <!-- ./end stat box -->

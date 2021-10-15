@@ -1,7 +1,7 @@
 <template>
   <v-hover v-slot="{ hover }">
-    <v-card :class="color" color="accent-3" dark to="/box" :elevation="hover ? 8 : 4">
-      <v-card-text>
+    <v-card :class="color" color="accent-3" dark :to="to" :elevation="hover ? 8 : 4">
+      <v-card-text class="pr-7">
         <v-row justify="space-between">
           <v-col md="4" cols="6">
             <h3 class="text-h4 font-weight-bold white--text">6</h3>
@@ -30,7 +30,7 @@
 <script>
 export default {
   name: "Box",
-  props: ["name", "color", "icon"],
+  props: ["name", "color", "icon", "to"],
 };
 </script>
 

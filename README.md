@@ -4,20 +4,27 @@
 
 1. Đã làm
 
-- Vuetify statbox
-  - Làm sao để icon flex-end?
-  - Hover bị lag lag?
-
 - Refactoring
   - Dashboard
-    - Stat box:
-      - Slot: Tên box
-      - Từ slot => Hiện màu nào
+    - Stat box: API
+      - Tên box
+      - Hiện màu nào
       - Refactoring hover
     - Table:
       - Slot: Data cần hiển thị
 
 2. Chưa làm:
+
+- Refactoring
+
+  - Dashboard
+    - Table: API
+      - Data cần hiển thị
+
+- Vuetify statbox
+
+  - Làm sao để icon flex-end?
+  - Sửa màu
 
 - Sidebar
 
