@@ -33,7 +33,7 @@
           <Box :name="`Inbox`" :color="`green`" :icon="`mdi-message`" :to="`/inbox`" />
         </v-col>
         <v-col sm="3" cols="12">
-          <Box :name="`Event`" :color="`yellow`" :icon="`mdi-calendar`" :to="`/calendar`" />
+          <Box :name="`Event`" :color="`amber`" :icon="`mdi-calendar`" :to="`/calendar`" />
         </v-col>
         <v-col sm="3" cols="12">
           <Box :name="`Issues`" :color="`red`" :icon="`mdi-alert`" :to="`/project`" />

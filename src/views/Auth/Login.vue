@@ -51,6 +51,7 @@
                 </div>
                 <!-- /.col -->
               </div>
+              <p>username: admin, password: admin</p>
             </form>
 
             <div class="social-auth-links text-center mt-2 mb-3">

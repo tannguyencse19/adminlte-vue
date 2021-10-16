@@ -10,6 +10,8 @@
 
 2. Chưa làm:
 
+- AdminLTE -> JS
+
 - Loading giữa các trang: https://stackoverflow.com/questions/44886812/how-to-display-a-loading-animation-while-a-lazy-loaded-route-component-is-bein
 
 - Refactoring
