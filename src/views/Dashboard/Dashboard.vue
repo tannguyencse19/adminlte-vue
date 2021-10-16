@@ -1,29 +1,26 @@
 <template>
   <div>
     <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <v-container class="pl-5 pr-5" fluid>
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0">Welcome Alexander Pierce</h1>
-            <p>Department: Human Resources</p>
-          </div>
-          <!-- /.col -->
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item">
-                <router-link to="/">Home</router-link>
-              </li>
-            </ol>
-            <!-- <div>Widget option</div> -->
-          </div>
-          <!-- /.col -->
+    <v-container class="pl-5 pr-5" fluid>
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h2 class="m-0">Welcome Alexander Pierce</h2>
+          <p>Department: Human Resources</p>
         </div>
-        <!-- /.row -->
-      </v-container>
-      <!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+        <!-- /.col -->
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item">
+              <router-link to="/">Home</router-link>
+            </li>
+          </ol>
+          <!-- <div>Widget option</div> -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </v-container>
+    <!-- /.container-fluid -->
 
     <!-- Main content -->
     <v-container class="pl-5 pr-5" fluid>
@@ -46,14 +43,10 @@
 
       <v-row>
         <v-col lg="6" cols="12">
-          <Table>
-            <template v-slot:tableTitle>My Tasks</template>
-          </Table>
+          <Table :title="`My Tasks`" />
         </v-col>
         <v-col lg="6" cols="12">
-          <Table>
-            <template v-slot:tableTitle>My Events</template>
-          </Table>
+          <Table :title="`My Events`" />
         </v-col>
       </v-row>
     </v-container>

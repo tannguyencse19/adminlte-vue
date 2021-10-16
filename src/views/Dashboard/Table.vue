@@ -1,8 +1,8 @@
 <template>
   <v-card class="mb-5" elevation="4">
-    <v-skeleton-loader class="mx-auto" type="card">
+    <!-- <v-skeleton-loader class="mx-auto" type="card"> -->
       <v-card-title class="justify-space-between pb-0 text-body-1 font-weight-medium">
-        <slot name="tableTitle"></slot>
+        {{title}}
         <v-btn icon @click="toggleBtn = !toggleBtn">
           <v-icon v-if="toggleBtn" color="blue darken-2">mdi-eye</v-icon>
           <v-icon v-else color="blue darken-2">mdi-eye-off</v-icon>
@@ -35,12 +35,13 @@
           </div>
         </v-expand-transition>
       </v-card-text>
-    </v-skeleton-loader>
+    <!-- </v-skeleton-loader> -->
   </v-card>
 </template>
 
 <script>
 export default {
+  props: ["title"],
   data() {
     return {
       toggleBtn: true,

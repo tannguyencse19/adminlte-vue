@@ -5,15 +5,12 @@
 1. Đã làm
 
 - Refactoring
-  - Dashboard
-    - Stat box: API
-      - Tên box
-      - Hiện màu nào
-      - Refactoring hover
-    - Table:
-      - Slot: Data cần hiển thị
+  - Calendar
+  - User list
 
 2. Chưa làm:
+
+- Loading giữa các trang: https://stackoverflow.com/questions/44886812/how-to-display-a-loading-animation-while-a-lazy-loaded-route-component-is-bein
 
 - Refactoring
 
@@ -21,6 +18,8 @@
     - Table: API
       - Data cần hiển thị
   - Navbar notification: API
+
+- Thay breadcrumb = v-breadcrumb?
 
 - Vuetify statbox
 
