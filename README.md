@@ -4,15 +4,15 @@
 
 1. Đã làm
 
-- Refactoring
-  - Calendar
+- JSON server
   - User list
 
 2. Chưa làm:
 
 - AdminLTE -> JS
 
-- Loading giữa các trang: https://stackoverflow.com/questions/44886812/how-to-display-a-loading-animation-while-a-lazy-loaded-route-component-is-bein
+- Loading giữa các trang:
+  https://stackoverflow.com/questions/44886812/how-to-display-a-loading-animation-while-a-lazy-loaded-route-component-is-bein
 
 - Refactoring
 
@@ -45,6 +45,8 @@
     - header bị lệch do có icon sort
 
 3. Bug
+
+- Chưa handle được fail uri
 
 ## De serve project:
 

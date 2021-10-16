@@ -14,8 +14,6 @@ import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
 import InboxRead from "@/views/Inbox/Read/Read.vue";
 import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
 import Dashboard from "@/views/Dashboard/Dashboard.vue";
-import UserList from "@/json/UserList.json";
-import AdminList from "@/json/AdminList.json";
 import UserProfile from "@/views/User/Profile.vue";
 import List from "@/views/User/List.vue";
 import navbar from "@/components/Navbar.vue"
@@ -101,13 +99,13 @@ const routes = [
         path: "/user-list",
         name: "user-list",
         component: List,
-        props: { dataProp: UserList },
+        props: { uriProp: "http://localhost:3000/user2" },
       },
       {
         path: "/admin-list",
         name: "admin-list",
         component: List,
-        props: { dataProp: AdminList },
+        props: { uriProp: "http://localhost:3000/admin" },
       },
     ],
   },

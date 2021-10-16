@@ -23,6 +23,7 @@
         :items-per-page="10"
         :search="search"
         height="550"
+        :loading="loading"
       >
         <template v-for="header in headers" v-slot:[`header.${header.value}`]="propsAPI">
           <span :key="header.value" class="black--text text-subtitle-2 font-weight-bold">
@@ -118,7 +119,8 @@
         </template>
 
         <template v-slot:no-data>
-          <v-btn color="primary" @click="fetchData">Reset</v-btn>
+          <div class="text-h6">{{errFetchMsg}}</div>
+          <v-btn color="primary" @click="refresh">Refresh</v-btn>
         </template>
       </v-data-table>
       <!-- ./v-data-table -->
@@ -188,7 +190,7 @@ export default {
   components: {
     ImportExcel,
   },
-  props: ["dataProp"],
+  props: ["uriProp"],
   data: () => ({
     headers: [
       { text: "Code", value: "code" },
@@ -199,7 +201,7 @@ export default {
       { text: "Status", value: "status" },
       { text: "Actions", value: "actions", sortable: false },
     ],
-    userList: [],
+    userList: undefined,
     dialog: false,
     dialogDelete: false,
     dropdown: false,
@@ -224,6 +226,8 @@ export default {
     snackText: "",
     max25chars: (v) => v.length <= 100 || "Input too long!",
     pagination: {},
+    loading: true,
+    errFetchMsg: "",
   }),
   computed: {
     formTitle() {
@@ -238,18 +242,36 @@ export default {
     dialogDelete: function (val) {
       val || this.closeDelete();
     },
-    dataProp: function (newVal) {
+    uriProp: function (newVal) {
       this.fetchData(newVal);
     },
   },
 
   created() {
-    this.fetchData(this.dataProp);
+    this.fetchData(this.uriProp);
   },
 
   methods: {
-    fetchData(data) {
-      this.userList = data;
+    fetchData(uri) {
+      fetch(uri)
+        .then((res) => res.json())
+        .then((data) => {
+          this.loading = false;
+          if (!(data &&
+            Object.keys(data).length === 0 &&
+            Object.getPrototypeOf(data) === Object.prototype) || data.length > 0) {
+              this.userList = data;
+          } else this.errFetchMsg = "There's no data to show!"
+        })
+        .catch(() => {
+          this.loading = false;
+          this.errFetchMsg = "Something wrong, refresh or go back later :("
+        });
+    },
+
+    refresh() {
+      this.loading = true;
+      this.fetchData();
     },
 
     addItem() {
