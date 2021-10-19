@@ -4,8 +4,11 @@
 
 1. Đã làm
 
-- JSON server
-  - User list
+- Route guarding
+- Login UI UX:
+  - Alert wrong password
+  - Enter = Sign in
+- Route transition
 
 2. Chưa làm:
 
@@ -47,6 +50,7 @@
 3. Bug
 
 - Chưa handle được fail uri
+- drawer bi loi mutate nen nhan chua muot
 
 ## De serve project:
 

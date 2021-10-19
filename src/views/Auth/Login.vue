@@ -1,6 +1,16 @@
 <template>
   <v-app>
-    <body class="login-page" style="background-color: #2d3a4b">
+    <body class="login-page" style="background-color: #2d3a4b; position: relative">
+      <v-alert
+        type="error"
+        v-model="wrong"
+        class="alert-wrong-pass"
+        :class="{ transition: wrong }"
+        transition="slide-x-reverse-transition"
+        dismissible
+      >
+        Wrong Password
+      </v-alert>
       <div class="login-box">
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
@@ -15,7 +25,7 @@
 
             <form action="../../index3.html" method="post">
               <div class="input-group mb-3">
-                <input type="email" class="form-control" placeholder="Email" />
+                <input type="email" class="form-control" placeholder="Email" v-model="user.name" />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-envelope"></span>
@@ -23,7 +33,12 @@
                 </div>
               </div>
               <div class="input-group mb-3">
-                <input type="password" class="form-control" placeholder="Password" />
+                <input
+                  type="password"
+                  class="form-control"
+                  placeholder="Password"
+                  v-model="user.password"
+                />
                 <div class="input-group-append">
                   <div class="input-group-text">
                     <span class="fas fa-lock"></span>
@@ -44,7 +59,8 @@
                     color="blue"
                     dark
                     style="box-sizing: content-box"
-                    @click="overlay = !overlay"
+                    @click="handleSignin"
+                    @keyup.enter="handleSignin"
                   >
                     Sign In
                   </v-btn>
@@ -52,6 +68,8 @@
                 <!-- /.col -->
               </div>
             </form>
+
+            <h6>Username: admin, Password: admin</h6>
 
             <div class="social-auth-links text-center mt-2 mb-3">
               <a href="#" class="btn btn-block btn-dark">
@@ -95,17 +113,61 @@ export default {
   name: "Login",
   data: () => ({
     overlay: false,
+    user: {
+      name: "",
+      password: "",
+    },
+    wrong: false,
+    // pushAlert: 0,
   }),
+
+  mounted() {
+    // const vue = this;
+    window.addEventListener("keyup", (event) => {
+      if (event.key === 'Enter') {
+        this.handleSignin();
+      }
+    });
+  },
 
   watch: {
     overlay(val) {
       val &&
         setTimeout(() => {
+          if (this.user.name === "admin" && this.user.password === "admin") {
+            window.localStorage.setItem("user", JSON.stringify(this.user));
+            this.$router.push({ name: "Dashboard" });
+          } else {
+            this.wrong = true;
+          }
           this.overlay = false;
-          this.$router.push("/dashboard");
         }, 2000);
+    },
+    wrong(val) {
+      val &&
+        setTimeout(() => {
+          this.wrong = false;
+        }, 3000);
+    },
+  },
+
+  methods: {
+    handleSignin() {
+      this.overlay = !this.overlay;
     },
   },
 };
 </script>
-<style  scoped ></style>
+
+<style scoped>
+.alert-wrong-pass {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+}
+
+/* Viet vay moi chiu transition */
+.alert-wrong-pass.transition {
+  margin-right: 30px;
+}
+</style>

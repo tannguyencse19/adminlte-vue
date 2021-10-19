@@ -60,7 +60,7 @@
       </v-list>
     </v-menu>
 
-    <v-btn to="/" text>Logout</v-btn>
+    <v-btn @click="handleLogout" text>Logout</v-btn>
   </v-app-bar>
 </template>
 
@@ -105,6 +105,10 @@ export default {
     toggleSidebar() {
       this.$emit("toggleSidebar");
     },
+    handleLogout() {
+      window.localStorage.removeItem("user");
+      this.$router.push({name: "login"})
+    }
   },
 };
 </script>

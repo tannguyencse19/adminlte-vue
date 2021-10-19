@@ -39,6 +39,7 @@ const routes = [
   {
     path: "",
     component: AfterLogin,
+    meta: { requiresAuth: true },
     children: [
       {
         path: "/dashboard",
@@ -121,5 +122,12 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(route => route.meta.requiresAuth)) {
+    if (!window.localStorage.getItem("user") && to.name !== "login") next({ name: "login" });
+    else next();
+  } else next();
+})
 
 export default router;

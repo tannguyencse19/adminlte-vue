@@ -2,10 +2,12 @@
   <v-app id="inspire">
     <Sidebar :drawerProp="drawer" />
 
-    <Navbar @toggleSidebar="() => drawer = !drawer" />
+    <Navbar @toggleSidebar="() => (drawer = !drawer)" />
 
     <v-main>
-      <router-view />
+      <transition name="slide" mode="out-in">
+        <router-view />
+      </transition>
     </v-main>
 
     <Footer />
@@ -52,4 +54,14 @@ export default {
   border-radius: 50px;
 }
 
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateX(5%);
+}
 </style>
