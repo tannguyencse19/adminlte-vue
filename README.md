@@ -4,15 +4,15 @@
 
 1. Đã làm
 
-- Route guarding
-- Login UI UX:
-  - Alert wrong password
-  - Enter = Sign in
-- Route transition
+- Lazy loading
 
 2. Chưa làm:
 
-- AdminLTE -> JS
+- Nếu user đã log in rồi thì vào lại trang log in tự vào dashboard
+
+- 404 page
+
+- AdminLTE -> JS: User view, Project, Inbox
 
 - Loading giữa các trang:
   https://stackoverflow.com/questions/44886812/how-to-display-a-loading-animation-while-a-lazy-loaded-route-component-is-bein

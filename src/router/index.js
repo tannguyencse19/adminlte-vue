@@ -1,22 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Login from "@/views/Auth/Login.vue";
-import ForgotPassword from "@/views/Auth/ForgotPassword.vue";
-import Register from "@/views/Auth/Register.vue";
-import AfterLogin from "@/views/Auth/AfterLogin.vue";
-import Calendar from "@/views/Calendar/Calendar.vue";
-import ProjectAdd from "@/views/Project/Add/ProjectAdd.vue";
-import ProjectDetail from "@/views/Project/Detail/ProjectDetail.vue";
-import ProjectEdit from "@/views/Project/Edit/ProjectEdit.vue";
-import ProjectKanban from "@/views/Project/Kanban/ProjectKanban.vue";
-import ProjectSummary from "@/views/Project/Summary/ProjectSummary.vue";
-import InboxCompose from "@/views/Inbox/Compose/Compose.vue";
-import InboxRead from "@/views/Inbox/Read/Read.vue";
-import InboxSummary from "@/views/Inbox/Summary/Summary.vue";
-import Dashboard from "@/views/Dashboard/Dashboard.vue";
-import UserProfile from "@/views/User/Profile.vue";
-import List from "@/views/User/List.vue";
-import navbar from "@/components/Navbar.vue"
+
 
 Vue.use(VueRouter);
 
@@ -24,97 +8,97 @@ const routes = [
   {
     path: "/",
     name: "login",
-    component: Login,
+    component: () => import(/* webpackChunkName: "auth" */ '@/views/Auth/Login.vue'),
   },
   {
     path: "/forgot-password",
     name: "forgot-password",
-    component: ForgotPassword,
+    component: () => import(/* webpackChunkName: "auth" */ '@/views/Auth/ForgotPassword.vue'),
   },
   {
     path: "/register",
     name: "register",
-    component: Register,
+    component: () => import(/* webpackChunkName: "auth" */ '@/views/Auth/Register.vue'),
   },
   {
     path: "",
-    component: AfterLogin,
+    component: () => import(/* webpackChunkName: "homepage" */ '@/views/Auth/AfterLogin.vue'),
     meta: { requiresAuth: true },
     children: [
       {
         path: "/dashboard",
         name: "Dashboard",
-        component: Dashboard,
+        component: () => import(/* webpackChunkName: "homepage" */ '@/views/Dashboard/Dashboard.vue'),
       },
       {
         path: "/profile",
         name: "profile",
-        component: UserProfile,
+        component: () => import(/* webpackChunkName: "user" */ '@/views/User/Profile.vue'),
       },
       {
         path: "/calendar",
         name: "calendar",
-        component: Calendar,
+        component: () => import(/* webpackChunkName: "calendar" */ '@/views/Calendar/Calendar.vue'),
       },
       {
         path: "/inbox",
         name: "inbox",
-        component: InboxSummary,
+        component: () => import(/* webpackChunkName: "inbox" */ '@/views/Inbox/Summary/Summary.vue'),
       },
       {
         path: "/inbox/read",
         name: "inbox-read",
-        component: InboxRead,
+        component: () => import(/* webpackChunkName: "inbox" */ '@/views/Inbox/Read/Read.vue'),
       },
       {
         path: "/inbox/compose",
         name: "inbox-compose",
-        component: InboxCompose,
+        component: () => import(/* webpackChunkName: "inbox" */ '@/views/Inbox/Compose/Compose.vue'),
       },
       {
         path: "/project",
         name: "project-summary",
-        component: ProjectSummary,
+        component: () => import(/* webpackChunkName: "project" */ '@/views/Project/Summary/ProjectSummary.vue'),
       },
       {
         path: "/project/add",
         name: "project-add",
-        component: ProjectAdd,
+        component: () => import(/* webpackChunkName: "project" */ '@/views/Project/Add/ProjectAdd.vue'),
       },
       {
         path: "/project/detail",
         name: "project-detail",
-        component: ProjectDetail,
+        component: () => import(/* webpackChunkName: "project" */ '@/views/Project/Detail/ProjectDetail.vue'),
       },
       {
         path: "/project/edit",
         name: "project-edit",
-        component: ProjectEdit,
+        component: () => import(/* webpackChunkName: "project" */ '@/views/Project/Edit/ProjectEdit.vue'),
       },
       {
         path: "/project/kanban",
         name: "project-kanban",
-        component: ProjectKanban,
+        component: () => import(/* webpackChunkName: "project" */ '@/views/Project/Kanban/ProjectKanban.vue'),
       },
       {
         path: "/user-list",
         name: "user-list",
-        component: List,
-        props: { uriProp: "http://localhost:3000/user2" },
+        component: () => import(/* webpackChunkName: "list" */ '@/views/User/List.vue'),
+        props: { uriProp: "http://localhost:3000/user" },
       },
       {
         path: "/admin-list",
         name: "admin-list",
-        component: List,
+        component: () => import(/* webpackChunkName: "list" */ '@/views/User/List.vue'),
         props: { uriProp: "http://localhost:3000/admin" },
       },
     ],
   },
   {
-    path: "/navbar",
-    name: "navbar",
-    component: navbar,
-  },
+    path: "*",
+    name: "404",
+    component: () => import(/* webpackChunkName: "404" */ '@/views/404/404.vue'),
+  }
 ];
 
 const router = new VueRouter({

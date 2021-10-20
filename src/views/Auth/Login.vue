@@ -1,16 +1,20 @@
 <template>
   <v-app>
     <body class="login-page" style="background-color: #2d3a4b; position: relative">
-      <v-alert
-        type="error"
-        v-model="wrong"
-        class="alert-wrong-pass"
-        :class="{ transition: wrong }"
-        transition="slide-x-reverse-transition"
-        dismissible
-      >
-        Wrong Password
-      </v-alert>
+      <div class="alert-wrong-password">
+        <!-- https://stackoverflow.com/questions/51412478/vuejs-adding-conditional-style-fails -->
+        <v-alert
+          v-for="i in alertArr.length"
+          :key="i"
+          type="error"
+          :value="alertArr[i-1]"
+          :class="`mt-${i}`"
+          :style="{'margin-right' : alertArr[i-1] ? '20px' : '0px'}"
+          transition="slide-x-reverse-transition"
+        >
+          Wrong Password
+        </v-alert>
+      </div>
       <div class="login-box">
         <!-- /.login-logo -->
         <div class="card card-outline card-primary">
@@ -117,14 +121,13 @@ export default {
       name: "",
       password: "",
     },
-    wrong: false,
-    // pushAlert: 0,
+    alertArr: [],
   }),
 
   mounted() {
     // const vue = this;
     window.addEventListener("keyup", (event) => {
-      if (event.key === 'Enter') {
+      if (event.key === "Enter") {
         this.handleSignin();
       }
     });
@@ -138,17 +141,17 @@ export default {
             window.localStorage.setItem("user", JSON.stringify(this.user));
             this.$router.push({ name: "Dashboard" });
           } else {
-            this.wrong = true;
+            this.alertArr.push(true);
           }
           this.overlay = false;
         }, 2000);
     },
-    wrong(val) {
-      val &&
-        setTimeout(() => {
-          this.wrong = false;
-        }, 3000);
-    },
+    // 'alertArr.length' : function(val) {
+    //   val &&
+    //     setTimeout(() => {
+    //       this.alertArr.pop();
+    //     }, 10000);
+    // },
   },
 
   methods: {
@@ -160,14 +163,9 @@ export default {
 </script>
 
 <style scoped>
-.alert-wrong-pass {
+.alert-wrong-password {
   position: absolute;
   right: 0px;
   top: 10px;
-}
-
-/* Viet vay moi chiu transition */
-.alert-wrong-pass.transition {
-  margin-right: 30px;
 }
 </style>
