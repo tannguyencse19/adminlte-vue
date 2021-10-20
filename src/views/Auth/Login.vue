@@ -4,13 +4,12 @@
       <div class="alert-wrong-password">
         <!-- https://stackoverflow.com/questions/51412478/vuejs-adding-conditional-style-fails -->
         <v-alert
-          v-for="i in alertArr.length"
+          v-for="i in alertCounter"
           :key="i"
           type="error"
-          :value="alertArr[i-1]"
-          :class="`mt-${i}`"
-          :style="{'margin-right' : alertArr[i-1] ? '20px' : '0px'}"
+          class="mt-5"
           transition="slide-x-reverse-transition"
+          dismissible
         >
           Wrong Password
         </v-alert>
@@ -121,7 +120,7 @@ export default {
       name: "",
       password: "",
     },
-    alertArr: [],
+    alertCounter: 0,
   }),
 
   mounted() {
@@ -141,7 +140,7 @@ export default {
             window.localStorage.setItem("user", JSON.stringify(this.user));
             this.$router.push({ name: "Dashboard" });
           } else {
-            this.alertArr.push(true);
+            this.alertCounter++;
           }
           this.overlay = false;
         }, 2000);
@@ -165,7 +164,7 @@ export default {
 <style scoped>
 .alert-wrong-password {
   position: absolute;
-  right: 0px;
-  top: 10px;
+  right: 20px;
+  top: 0px;
 }
 </style>
