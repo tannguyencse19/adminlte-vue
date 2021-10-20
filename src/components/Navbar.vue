@@ -16,7 +16,7 @@
       </template>
 
       <v-list three-line height="400px" width="450px" style="overflow-y: auto">
-        <template v-for="(item) in items">
+        <template v-for="item in items">
           <v-subheader v-if="item.header" :key="item.header" v-text="item.header" />
 
           <v-list-item v-else :key="item.title">
@@ -43,7 +43,7 @@
       </template>
 
       <v-list three-line height="400px" width="450px" style="overflow-y: auto">
-        <template v-for="(item) in items">
+        <template v-for="item in items">
           <v-subheader v-if="item.header" :key="item.header" v-text="item.header" />
 
           <v-list-item v-else :key="item.title">
@@ -106,9 +106,9 @@ export default {
       this.$emit("toggleSidebar");
     },
     handleLogout() {
-      window.localStorage.removeItem("user");
-      this.$router.push({name: "login"})
-    }
+      window.sessionStorage.removeItem("user");
+      this.$router.push({ name: "login" });
+    },
   },
 };
 </script>

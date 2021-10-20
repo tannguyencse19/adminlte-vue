@@ -5,15 +5,16 @@
 1. Đã làm
 
 - Lazy loading
+- Multiple popup
+- Nếu user đã log in rồi thì vào lại trang log in tự vào dashboard
 
 2. Chưa làm:
 
-- Nếu user đã log in rồi thì vào lại trang log in tự vào dashboard
-
+- Detect idle time
+- Thiết kế lại guard router (index.js): Nhìn phức tap
+- Multiple popup nhưng chưa có transition của ver0.1.9.4, với lại có bug âm counter
 - 404 page
-
 - AdminLTE -> JS: User view, Project, Inbox
-
 - Loading giữa các trang:
   https://stackoverflow.com/questions/44886812/how-to-display-a-loading-animation-while-a-lazy-loaded-route-component-is-bein
 
@@ -34,12 +35,6 @@
 - Sidebar
 
   - Fix lòi scroll
-
-- Navbar
-
-  - Notification + Message v-menu
-
-- Fix layout các views
 
 - User list
 
@@ -65,11 +60,6 @@
 - Forgot-password: Nam trong trang login
 - Calendar: Trong sidebar cua Dashboard. Sau khi an vao button calendar, scroll len de xem trang
   Calendar
-
-## Bug chua fix
-
-- Chua gan external script (vd: jquery, bootstrap - khong tinh BootstrapVue) vao Vue duoc
-- Style cua Vuetify override local style
 
 ## Cach modify
 

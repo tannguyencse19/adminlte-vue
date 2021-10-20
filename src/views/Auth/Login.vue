@@ -137,7 +137,7 @@ export default {
       val &&
         setTimeout(() => {
           if (this.user.name === "admin" && this.user.password === "admin") {
-            window.localStorage.setItem("user", JSON.stringify(this.user));
+            window.sessionStorage.setItem("user", JSON.stringify(this.user));
             this.$router.push({ name: "Dashboard" });
           } else {
             this.alertCounter++;
@@ -145,12 +145,12 @@ export default {
           this.overlay = false;
         }, 2000);
     },
-    // 'alertArr.length' : function(val) {
-    //   val &&
-    //     setTimeout(() => {
-    //       this.alertArr.pop();
-    //     }, 10000);
-    // },
+    alertCounter(val) {
+      val > 0 &&
+        setTimeout(() => {
+          this.alertCounter--;
+        }, 10000);
+    },
   },
 
   methods: {

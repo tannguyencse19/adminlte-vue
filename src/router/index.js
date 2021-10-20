@@ -7,18 +7,22 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
+    alias: "/login",
     name: "login",
     component: () => import(/* webpackChunkName: "auth" */ '@/views/Auth/Login.vue'),
+    meta: { redirectIfHasLoggedIn: true },
   },
   {
     path: "/forgot-password",
     name: "forgot-password",
     component: () => import(/* webpackChunkName: "auth" */ '@/views/Auth/ForgotPassword.vue'),
+    meta: { redirectIfHasLoggedIn: true },
   },
   {
     path: "/register",
     name: "register",
     component: () => import(/* webpackChunkName: "auth" */ '@/views/Auth/Register.vue'),
+    meta: { redirectIfHasLoggedIn: true },
   },
   {
     path: "",
@@ -109,9 +113,13 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.matched.some(route => route.meta.requiresAuth)) {
-    if (!window.localStorage.getItem("user") && to.name !== "login") next({ name: "login" });
+    if (!window.sessionStorage.getItem("user") && to.name !== "login") next({ name: "login" });
     else next();
-  } else next();
+  } else if (to.matched.some(route => route.meta.redirectIfHasLoggedIn)) {
+    if (window.sessionStorage.getItem("user") && to.name !== "Dashboard") next({ name: "Dashboard" });
+    else next();
+  }
+  else next();
 })
 
 export default router;
