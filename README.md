@@ -10,10 +10,10 @@
 
 2. Chưa làm:
 
+- Animating State with Watchers: https://vuejs.org/v2/guide/transitioning-state.html#Animating-State-with-Watchers
 - Detect idle time
 - Thiết kế lại guard router (index.js): Nhìn phức tap
 - Multiple popup nhưng chưa có transition của ver0.1.9.4, với lại có bug âm counter
-- 404 page
 - AdminLTE -> JS: User view, Project, Inbox
 - Loading giữa các trang:
   https://stackoverflow.com/questions/44886812/how-to-display-a-loading-animation-while-a-lazy-loaded-route-component-is-bein
